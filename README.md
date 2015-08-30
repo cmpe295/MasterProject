@@ -1,7 +1,4 @@
-# MasterProject
-
-#### Web Crawler
-
-#### Spark Platform
-
-#### Spark ML application
+##### MasterProject
+- Web Crawler
+- Spark Platform
+- Spark ML application
