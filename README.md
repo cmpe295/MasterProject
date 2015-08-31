@@ -1,6 +1,6 @@
 ##### MasterProject
 
 **Components:**
-- Web Crawler
-- Spark Platform
-- Spark ML application
+..- Web Crawler
+..- Spark Platform
+..- Spark ML application
