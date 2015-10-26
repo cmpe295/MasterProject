@@ -1,0 +1,475 @@
+STIME          TIME             UID   PID D    BLOCK   SIZE       COMM PATHNAME
+16783425686    16783425813        0    74 W      912   4096       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425716    16783425904        0    74 W     1320   4096       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425742    16783425968        0    74 W     1352   4096       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425776    16783426016        0    74 W    80496   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425802    16783426065        0    74 W   559200   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425831    16783426105        0    74 W  3392112   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425857    16783426144        0    74 W  3702096   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425881    16783426183        0    74 W  3702528   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425907    16783426221        0    74 W  3703120   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425931    16783426514        0    74 W  3707536   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425950    16783426567        0    74 W  3736128   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425967    16783426609        0    74 W  4085968   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783425986    16783426679        0    74 W  4162368   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783426003    16783426729        0    74 W  4165648   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783426576    16783426787        0    74 W 29100944   4096       apsd ??/ApplePushService/aps.db
+16783437444    16783437563        0    74 W  3701440   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783439825    16783440016        0    74 W 44087032   4096       apsd ??/ApplePushService/aps.db-wal
+16783448821    16783448936        0    74 W      888   4096       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783448839    16783448985        0    74 W     1352   4096       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783448874    16783449042        0    74 W  3701440   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783448854    16783449092        0    74 W     1360   4096       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783449769    16783449888        0    74 W 44087032   8192       apsd ??/ApplePushService/aps.db-wal
+16783456654    16783456761        0    74 W     1352   4096       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16783456679    16783456847        0    74 W  3701440   8192       apsd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16784451248    16784453003        0   165 R 29657520   4096 mds_stores ??/4DD24DFC-EB1C-4443-BE38-FD05DE074FFB/reverseDirectoryStore
+16784453147    16784453540        0   165 R 29656496  28672 mds_stores ??/4DD24DFC-EB1C-4443-BE38-FD05DE074FFB/reverseDirectoryStore
+16784453680    16784453946        0   165 R 29657856   4096 mds_stores ??/4DD24DFC-EB1C-4443-BE38-FD05DE074FFB/reverseDirectoryStore
+16787045225    16787047131        0    68 W 28576792   8192  coreduetd ??/CoreDuet/coreduetd.db-wal
+16787047434    16787047599        0    68 W 28576800  20480  coreduetd ??/CoreDuet/coreduetd.db-wal
+16787049169    16787049299        0    68 W 28576832   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16787049193    16787049351        0    68 W 28576912   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16787049621    16787049769        0    68 W 28576912   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16787049678    16787049835        0    68 W 28577328  16384  coreduetd ??/CoreDuet/coreduetd.db-wal
+16787164185    16787165773      501   718 R 29319024   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787165845    16787165990      501   718 R 29319024   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787166068    16787166183      501   718 R 29319024   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787166233    16787166567      501   718 R 29319024  24576      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787166635    16787166744      501   718 R 29319064   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787166788    16787166889      501   718 R 29319064   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787166942    16787167033      501   718 R 29319064   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787167077    16787167400      501   718 R 29319064  24576      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787167464    16787167565      501   718 R 29319104   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787167608    16787167714      501   718 R 29319104   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787167631    16787167953      501   718 R 29319144  20480      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787168015    16787168107      501   718 R 29319176   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787168151    16787168258      501   718 R 29319176   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787168173    16787168490      501   718 R 29320272  20480      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787168551    16787168651      501   718 R 29320304   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787168694    16787168810      501   718 R 29320304   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787168716    16787169043      501   718 R 29334912  20480      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787169104    16787169203      501   718 R 29334944   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787169246    16787169361      501   718 R 29334944   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787169268    16787169606      501   718 R 29335544  24576      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787169666    16787169761      501   718 R 29335584   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787169804    16787169911      501   718 R 29335584   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787169826    16787170148      501   718 R 29337016  20480      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787170207    16787170307      501   718 R 29337048   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787170349    16787170670      501   718 R 29337048  24576      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787170818    16787170925      501   718 R 29319064   4096      iTerm ??/com.googlecode.iterm2.savedState/data.data
+16787171046    16787171284      501   718 R 29319016   4096      iTerm ??/com.googlecode.iterm2.savedState/windows.plist
+16789680562    16789682800      501   698 R 28633064   4096    eclipse ??/dtool16/block_selection_mode.gif
+16789684133    16789684589      501   698 R 28633072   4096    eclipse ??/etool16/block_selection_mode.gif
+16789686192    16789686613      501   698 R 28632968   4096    eclipse ??/dtool16/show_whitespace_chars.gif
+16789687812    16789688190      501   698 R 28633056   4096    eclipse ??/etool16/show_whitespace_chars.gif
+16791272156    16791273751      501   698 R 44275296   4096    eclipse ??/.git/index
+16791274117    16791274383      501   698 R 44275280   4096    eclipse ??/MasterProject/.gitignore
+16791274619    16791274864      501   698 R 43827920   4096    eclipse ??/info/exclude
+16791429871    16791431490      501   698 R  4169520   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16791432914    16791433284      501   698 R  4174688   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16797792911    16797795034      501   698 R 63964952   4096    eclipse ??/icons/python_16x16.png
+16798234550    16798236100      501   565 W 28577464  16384     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16798236300    16798236452      501   565 W 28577464   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16798236573    16798236706      501   565 W 31228184  12288     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage
+16802732518    16802734765      501   698 R  4164480   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16802735202    16802735635      501   698 R  4165632   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16802735815    16802736161      501   698 R 29330840   4096    eclipse ??/io_plotting/parse_io.py
+16802736264    16802736355      501   698 W 28577640   4096    eclipse ??/43/207649a88d7b00151003bd7f745bc2b7
+16802736501    16802736579      501   698 W 28577648   4096    eclipse ??/io_plotting/parse_io.py
+16802738962    16802739289      501   698 R  4183248   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16802739351    16802739644      501   698 R  4182896   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16802739705    16802740028      501   698 R  4183104   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16802895926    16802897706      501   698 R  4166704   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16802898008    16802898200      501   698 W 28577656   4096    eclipse ??/org.python.pydev/99.v1_astdelta
+16802898312    16802898707      501   698 R  4166848   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16802898901    16802898998      501   698 W 28577672   4096    eclipse ??/com.python.pydev.analysis/23.v1_projectinfodelta
+16802899173    16802899285      501   698 W 28577680   4096    eclipse ??/com.python.pydev.analysis/24.v1_projectinfodelta
+16803944680    16803946497        0   165 R 29657448  20480 mds_stores ??/4DD24DFC-EB1C-4443-BE38-FD05DE074FFB/reverseDirectoryStore
+16804818037    16804819808      501   698 R  4166720   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16804819930    16804820456      501   698 R  4169792   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16804821252    16804821479      501   698 W 28577712   4096    eclipse ??/41/80c287a98d7b00151003bd7f745bc2b7
+16804821611    16804821785      501   698 W 28577760   4096    eclipse ??/io_plotting/parse_io.py
+16804933457    16804935111      501   698 R  4166928   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16804935345    16804935484      501   698 W 28577768   4096    eclipse ??/org.python.pydev/100.v1_astdelta
+16804935529    16804935616      501   698 W 28586280   4096    eclipse ??/v1_astmanager/modulesKeys
+16804935615    16804935718      501   698 W 28586288   4096    eclipse ??/v1_astmanager/pythonpath
+16804935698    16804936048      501   698 R  4166976   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16804936102    16804936403      501   698 R  4167008   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16804939788    16804940135      501   698 R  4167040   8192    eclipse ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16804946407    16804946533      501   698 W 28586296   4096    eclipse ??/com.python.pydev.analysis/25.v1_projectinfodelta
+16804946626    16804946714      501   698 W 28586304   4096    eclipse ??/com.python.pydev.analysis/26.v1_projectinfodelta
+16808585686    16808587774      501   565 W 28586312  16384     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16808587952    16808588132      501   565 W 28586312   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16808588269    16808588500      501   565 W 31228184  12288     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage
+16808911834    16808913360        0     1 W 28586672  12288    launchd ??/testlog/iosnoop.log
+16808915424    16808915582        0     1 W 29150808   4096    launchd ??/com.googlecode.iterm2.savedState/window_2.data
+16808915457    16808915656        0     1 W 29319016   4096    launchd ??/com.googlecode.iterm2.savedState/windows.plist
+16808915478    16808915703        0     1 W 29319024  24576    launchd ??/com.googlecode.iterm2.savedState/data.data
+16808916792    16808917273        0     1 R  4181056   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808917504    16808918040        0     1 R  4180688   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808945984    16808946287        0     1 W 28586736  32768    launchd ??/ApplePushService/aps.db-shm
+16808946413    16808946595        0     1 W 43146616   4096    launchd ??/asl/2015.10.25.U0.G80.asl
+16808946655    16808946780        0     1 W 43220304   4096    launchd ??/asl/2015.10.25.U0.G80.asl
+16808946840    16808946945        0     1 W 43220320   4096    launchd ??/asl/2015.10.25.U0.G80.asl
+16808946917    16808947092        0     1 W 45066024   4096    launchd ??/log/system.log
+16808947058    16808947209        0     1 W 28576920   4096    launchd ??/asl/StoreData
+16808963548    16808963671        0     1 W      880   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963570    16808963736        0     1 W      888   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963590    16808963798        0     1 W      896   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963610    16808963845        0     1 W      904   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963634    16808963891        0     1 W      912   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963653    16808963935        0     1 W      920   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963675    16808963982        0     1 W      928   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963694    16808964058        0     1 W      960   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963712    16808964127        0     1 W     1040   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963731    16808964201        0     1 W     1056   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963750    16808964249        0     1 W     1200   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963770    16808964295        0     1 W     1216   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963792    16808964342        0     1 W     1344   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963812    16808964388        0     1 W     1352   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963885    16808964475        0     1 W     1400   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963904    16808964531        0     1 W     1408   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963922    16808964576        0     1 W     1416   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963943    16808964620        0     1 W     1528   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963831    16808964665        0     1 W     1368   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963849    16808964709        0     1 W     1376   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963867    16808964753        0     1 W     1384   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808963993    16808964824        0     1 W     1560   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964042    16808964877        0     1 W     1832   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964075    16808964921        0     1 W    80496   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964103    16808964975        0     1 W   559200   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964133    16808965017        0     1 W  1125600   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964162    16808965059        0     1 W  3392112   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964184    16808965103        0     1 W  3392160   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964212    16808965167        0     1 W  3392176   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964241    16808965213        0     1 W  3683136   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964263    16808965257        0     1 W  3700944   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964281    16808965301        0     1 W  3701104   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964299    16808965346        0     1 W  3701440   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964318    16808965390        0     1 W  3703120   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964336    16808965434        0     1 W  3706208   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964355    16808965503        0     1 W  3707536   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964374    16808965560        0     1 W  3736128   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964392    16808965616        0     1 W  3745744   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964411    16808965660        0     1 W  4085968   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964429    16808965707        0     1 W  4162368   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964448    16808965752        0     1 W  4164432   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808964480    16808965796        0     1 W  4164480   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965112    16808965863        0     1 W  4165632   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965166    16808965917        0     1 W  4165648   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965229    16808965963        0     1 W  4165904   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965265    16808966007        0     1 W  4166672   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965313    16808966051        0     1 W  4166704   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965359    16808966094        0     1 W  4166848   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965398    16808966137        0     1 W  4166896   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965439    16808966187        0     1 W  4166912   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965480    16808966230        0     1 W  4166928   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965566    16808966273        0     1 W  4166960   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965618    16808966315        0     1 W  4166976   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965666    16808966356        0     1 W  4166992   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965713    16808966397        0     1 W  4167008   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965758    16808966443        0     1 W  4167040   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965802    16808966483        0     1 W  4167344   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965846    16808966521        0     1 W  4170400   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965918    16808966560        0     1 W  4172544   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808965967    16808966598        0     1 W  4180688   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808966011    16808966637        0     1 W  4181056   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16808966056    16808966688        0     1 W  4181088   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16810858323    16810859743        0    68 W 28577352   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16810858357    16810859822        0    68 W 28577464   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16810860093    16810860247        0    68 W 28577464  20480  coreduetd ??/CoreDuet/coreduetd.db-wal
+16810861972    16810862130        0    68 W 28577496   8192  coreduetd ??/CoreDuet/coreduetd.db-wal
+16810862483    16810862613        0    68 W 28577504   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16810862507    16810862690        0    68 W 28586312  16384  coreduetd ??/CoreDuet/coreduetd.db-wal
+16810970661    16810972258      501   698 R 28683864   4096    eclipse ??/org.eclipse.platform.ide.savedState/data.data
+16810972373    16810972649      501   698 R 28663888   4096    eclipse ??/org.eclipse.platform.ide.savedState/windows.plist
+16814457928    16814459872        0   123 W 28586344   4096   cfprefsd ??/Preferences/com.apple.xpc.activity2.plist.Gu5VDzF
+16818239688    16818241808      501   565 W 28586352  16384     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16818242122    16818242345      501   565 W 28586352   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16818242484    16818242669      501   565 W 31228184  12288     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage
+16819406688    16819408341      501   347 W 28601088  77824 nsurlstoraged ??/Cookies/Cookies.binarycookies
+16830262952    16830265068      501   565 W 28601240  16384     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16830265251    16830265441      501   565 W 28601240   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16830265572    16830265808      501   565 W 31228184  12288     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage
+16833944737    16833946661        0    68 W 28586336   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16833944787    16833946747        0    68 W 28586616   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16833947210    16833947317        0    68 W 28586616   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16833947241    16833947385        0    68 W 28586800  16384  coreduetd ??/CoreDuet/coreduetd.db-wal
+16833950008    16833950296        0    68 R 28639392   4096  coreduetd ??/CoreDuet/coreduetd.db
+16833951281    16833951408        0    68 W 28586824   8192  coreduetd ??/CoreDuet/coreduetd.db-wal
+16833951707    16833951848        0    68 W 28586832  20480  coreduetd ??/CoreDuet/coreduetd.db-wal
+16836706676    16836708715        0   123 W 29150928   4096   cfprefsd ??/Preferences/com.apple.Bluetooth.plist.i0ZZFEC
+16836712207    16836712357        0   123 W 29150936   4096   cfprefsd ??/Preferences/com.apple.Bluetooth.plist.V5e552P
+16836788506    16836788901      501   583 W 29153696   8192       Mail ??/(A Document Being Saved By Mail)/.mboxCache.plist
+16837107941    16837109354      501   583 W 29153712   8192       Mail ??/(A Document Being Saved By Mail)/.mboxCache.plist
+16837112843    16837112969      501   583 W 29153728  12288       Mail ??/(A Document Being Saved By Mail)/.mboxCache.plist
+16838240124    16838241738      501   565 W 29153912  16384     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16838241918    16838242106      501   565 W 29153912   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16838242240    16838242458      501   565 W 31228184  12288     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage
+16838912512    16838914003        0     1 W 28586688   4096    launchd ??/testlog/iosnoop.log
+16838912555    16838914077        0     1 W 28587016  16384    launchd ??/testlog/iosnoop.log
+16838916333    16838916496        0     1 W 29150840   4096    launchd ??/com.googlecode.iterm2.savedState/window_2.data
+16838916470    16838916632        0     1 W 28663888   4096    launchd ??/org.eclipse.platform.ide.savedState/windows.plist
+16838916501    16838916685        0     1 W 28683864   4096    launchd ??/org.eclipse.platform.ide.savedState/data.data
+16838918681    16838918834        0     1 W 45163584   4096    launchd ??/Mail/2015-10-25_IMAPConnection-imap.gmail.com.log
+16838918746    16838918903        0     1 W 44814584   4096    launchd ??/Mail/2015-10-25_IMAPSyncActivity.log
+16838918768    16838918956        0     1 W 44814776  24576    launchd ??/Mail/2015-10-25_IMAPSyncActivity.log
+16838918706    16838919005        0     1 W 45163704  40960    launchd ??/Mail/2015-10-25_IMAPConnection-imap.gmail.com.log
+16838918797    16838919063        0     1 W 48502856   4096    launchd ??/Mail/2015-10-25_AccountFetch.log
+16838918822    16838919102        0     1 W 48502608   4096    launchd ??/Mail/2015-10-25_AccountManager.log
+16838944664    16838944887        0     1 W 28586664   4096    launchd ??/systemstats/ECCC4E63-801F-48B2-BCD3-F87EC36F8890.perfd.events.XXXXXX.stats
+16838945497    16838945633        0     1 W 43146616   4096    launchd ??/asl/2015.10.25.U0.G80.asl
+16838945525    16838945718        0     1 W 43220320   4096    launchd ??/asl/2015.10.25.U0.G80.asl
+16838945596    16838945779        0     1 W 33905528   4096    launchd ??/com.apple.cdscheduler/cdscheduler.log
+16838945621    16838945818        0     1 W 33905936   4096    launchd ??/com.apple.cdscheduler/cdscheduler.log
+16838945648    16838945873        0     1 W 44535128   4096    launchd ??/log/authd.log
+16838945687    16838945905        0     1 W 45066024   8192    launchd ??/log/system.log
+16838945764    16838945953        0     1 W 43839176   4096    launchd ??/audit/20151025191213.not_terminated
+16838945811    16838945992        0     1 W 28576920   4096    launchd ??/asl/StoreData
+16838959414    16838959563        0     1 W      880   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959449    16838959643        0     1 W      896   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959469    16838959690        0     1 W     1040   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959488    16838959736        0     1 W     1224   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959506    16838959782        0     1 W     1320   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959525    16838959847        0     1 W     1352   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959545    16838959912        0     1 W     1368   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959563    16838959958        0     1 W     1376   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959581    16838960005        0     1 W     1384   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959599    16838960049        0     1 W    64112   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959617    16838960094        0     1 W    64120   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959635    16838960138        0     1 W    64240   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959710    16838960190        0     1 W  1125600   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959728    16838960234        0     1 W  3392112   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959746    16838960280        0     1 W  3392176   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959765    16838960328        0     1 W  3683104   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959654    16838960375        0     1 W    64280   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959672    16838960420        0     1 W    80496   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959691    16838960465        0     1 W   559200   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959783    16838960524        0     1 W  3683520   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959801    16838960570        0     1 W  3683552   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959820    16838960617        0     1 W  3700944   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959838    16838960662        0     1 W  3701104   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959860    16838960709        0     1 W  3701248   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959887    16838960755        0     1 W  3701280   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959912    16838960801        0     1 W  3702096   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959931    16838960859        0     1 W  3702528   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959949    16838960905        0     1 W  3703120   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959968    16838960950        0     1 W  3706000   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838959986    16838960993        0     1 W  3706480   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960004    16838961037        0     1 W  3707536   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960023    16838961080        0     1 W  3721696   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960288    16838961124        0     1 W  3722672   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960342    16838961177        0     1 W  3736128   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960375    16838961221        0     1 W  3745744   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960577    16838961263        0     1 W  3749168   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960628    16838961304        0     1 W  3751232   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960669    16838961345        0     1 W  4085968   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960718    16838961385        0     1 W  4162368   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960760    16838961425        0     1 W  4164432   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960809    16838961478        0     1 W  4165648   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960853    16838961518        0     1 W  4181680   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16838960911    16838961559        0     1 W  4185760   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16840596562    16840598262      222   685 R 30957800   4096   netbiosd ??/SystemConfiguration/com.apple.smb.server.plist
+16840599328    16840599772      222   685 R 31492280   8192   netbiosd ??/SystemConfiguration/preferences.plist
+16841118387    16841120073        0  1281 R 23066536   4096   xpcproxy ??/sbin/gssd/..namedfork/rsrc
+16841120318    16841120859        0  1281 R 23066544  28672   xpcproxy ??/sbin/gssd/..namedfork/rsrc
+16841131206    16841131609        0  1281 R 23066600   8192       gssd ??/sbin/gssd/..namedfork/rsrc
+16841424269    16841425985      222  1282 R 18061552   4096       gssd ??/MacOS/heimdalodpac/..namedfork/rsrc
+16841426135    16841426684      222  1282 R 18061560   4096       gssd ??/MacOS/heimdalodpac/..namedfork/rsrc
+16841427404    16841427915      222  1282 R 18061512   8192       gssd ??/MacOS/Reachability/..namedfork/rsrc
+16841428645    16841429191      222  1282 R 18061536   8192       gssd ??/MacOS/SCKerberosConfig/..namedfork/rsrc
+16852000651    16852003136      501   378 W 34624352 196608 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852003358    16852003537      501   378 W 34624352   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852003861    16852004067      501   378 W 30412128  12288 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852003904    16852004126      501   378 W 30415776  12288 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852003958    16852004160      501   378 W 30416472   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852003933    16852004191      501   378 W 30416424   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852003979    16852004237      501   378 W 30420560   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004007    16852004278      501   378 W 30420768   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004026    16852004307      501   378 W 30420928   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004058    16852004340      501   378 W 30426688   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004073    16852004372      501   378 W 30427424   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004087    16852004402      501   378 W 30429896   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004101    16852004432      501   378 W 30429920   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004116    16852004479      501   378 W 30708192  12288 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004131    16852004511      501   378 W 31080448   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004145    16852004541      501   378 W 31965584   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004160    16852004571      501   378 W 32076048   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004174    16852004601      501   378 W 32076064   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004188    16852004630      501   378 W 33510568   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004202    16852004660      501   378 W 35732776   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004217    16852004689      501   378 W 35732872   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004257    16852004720      501   378 W 37241728   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004287    16852004750      501   378 W 37511608  12288 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004314    16852004781      501   378 W 37511648   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004343    16852004829      501   378 W 37511744   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004375    16852004859      501   378 W 37511768   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004405    16852004896      501   378 W 37511792   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004435    16852004926      501   378 W 40428232   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004465    16852004955      501   378 W 40428256   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004514    16852004985      501   378 W 40433344   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004545    16852005014      501   378 W 40433440   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004574    16852005043      501   378 W 40651656   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004604    16852005070      501   378 W 40651680   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004634    16852005097      501   378 W 41970528   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004663    16852005123      501   378 W 41970560   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004693    16852005150      501   378 W 41972720   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004723    16852005176      501   378 W 41972872   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004754    16852005203      501   378 W 41973152   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004784    16852005229      501   378 W 44804640   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004830    16852005276      501   378 W 44806192   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004862    16852005304      501   378 W 44806968   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004891    16852005330      501   378 W 44807008   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004931    16852005357      501   378 W 44807048   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004959    16852005384      501   378 W 44807216   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852004988    16852005410      501   378 W 44807264   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852005018    16852005437      501   378 W 44807440   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852012499    16852013048      501   378 W 34832416 110592 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852013192    16852013331      501   378 W 34832416   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852013520    16852013651      501   378 W 30412128   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013561    16852013716      501   378 W 30416096   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013543    16852013827      501   378 W 30415792   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013576    16852013885      501   378 W 30427376   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013591    16852013937      501   378 W 30708248   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013605    16852013984      501   378 W 30934784   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013621    16852014012      501   378 W 30934808   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013636    16852014039      501   378 W 32056648   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013650    16852014066      501   378 W 35945224   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013678    16852014094      501   378 W 37511608   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013692    16852014136      501   378 W 37511744   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013707    16852014163      501   378 W 40651656   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013721    16852014190      501   378 W 40651680   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013815    16852014217      501   378 W 41971424   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013849    16852014243      501   378 W 41973400   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013872    16852014269      501   378 W 41973432   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013915    16852014296      501   378 W 44805040   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852013938    16852014323      501   378 W 44806192   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852015501    16852015792      501   378 W 35202936  69632 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852015874    16852016001      501   378 W 35202936   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852016135    16852016232      501   378 W 30412128   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016158    16852016294      501   378 W 30426776   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016172    16852016356      501   378 W 30427416   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016186    16852016412      501   378 W 30708280   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016200    16852016598      501   378 W 31080440   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016214    16852016652      501   378 W 31965600   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016231    16852016678      501   378 W 32076048   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016246    16852016703      501   378 W 32076064   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016268    16852016730      501   378 W 35148024   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016292    16852016756      501   378 W 35732872   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016320    16852016783      501   378 W 37241728   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016334    16852016809      501   378 W 40651680   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016348    16852016836      501   378 W 41973096   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016380    16852016862      501   378 W 44806336   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852016394    16852016887      501   378 W 44807336   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852017430    16852017732      501   378 W 35220280  53248 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852017824    16852017958      501   378 W 35220280   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852018066    16852018156      501   378 W 30412128   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852018085    16852018196      501   378 W 30420552   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852018100    16852018227      501   378 W 30427408   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852018114    16852018270      501   378 W 30708216   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852018143    16852018298      501   378 W 37511616   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852018157    16852018335      501   378 W 40651680   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852018171    16852018362      501   378 W 41970560   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852018189    16852018389      501   378 W 41972440   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852018203    16852018416      501   378 W 41973016   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019065    16852019372      501   378 W 35243896  57344 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852019463    16852019592      501   378 W 35243896   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852019706    16852019792      501   378 W 30412128   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019724    16852019844      501   378 W 30708256   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019738    16852019889      501   378 W 31965576   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019754    16852019920      501   378 W 35148032   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019780    16852019966      501   378 W 37511768   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019794    16852019995      501   378 W 40428232   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019808    16852020035      501   378 W 40433440   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019822    16852020063      501   378 W 41724560   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019837    16852020090      501   378 W 41724592   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019852    16852020117      501   378 W 41970528   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019866    16852020160      501   378 W 41971032   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852019881    16852020188      501   378 W 41972944   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852020669    16852020907      501   378 W 35246776  53248 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852021002    16852021099      501   378 W 35246776   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852021210    16852021291      501   378 W 30412128   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852021228    16852021330      501   378 W 30420760   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852021242    16852021370      501   378 W 30429896   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852021255    16852021397      501   378 W 30708192   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852021269    16852021424      501   378 W 30708272   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852021282    16852021458      501   378 W 30934752   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852021303    16852021485      501   378 W 37241704   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852021318    16852021511      501   378 W 40651680   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852021333    16852021538      501   378 W 41973224  12288 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852021348    16852021575      501   378 W 44807216   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852022513    16852022889      501   378 W 35247576  73728 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852023032    16852023181      501   378 W 35247576   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db-journal
+16852023356    16852023487      501   378 W 30412128   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023390    16852023555      501   378 W 30416472   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023413    16852023592      501   378 W 30427392   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023435    16852023622      501   378 W 30708184   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023457    16852023673      501   378 W 30708200   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023490    16852023713      501   378 W 30934792   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023513    16852023742      501   378 W 32076056   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023535    16852023769      501   378 W 32076072   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023569    16852023797      501   378 W 40428216   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023584    16852023839      501   378 W 40651680   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023626    16852023867      501   378 W 41971872   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023641    16852023894      501   378 W 41973288   8192 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023655    16852023920      501   378 W 41973496   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16852023673    16852023947      501   378 W 44807264   4096 iStat Menus Stat ??/databases/iStatMenusStatus.db
+16858241166    16858243274      501   565 W 35247928  16384     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16858243467    16858243694      501   565 W 35247928   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16858243840    16858244027      501   565 W 31228184  12288     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage
+16859172537    16859174350      501   347 W 35248424  77824 nsurlstoraged ??/Cookies/Cookies.binarycookies
+16867136924    16867138995      501   583 W 35248720   8192       Mail ??/(A Document Being Saved By Mail)/BackupTOC.plist
+16868384510    16868386110      501   565 W 35249000  16384     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16868386324    16868386513      501   565 W 35249000   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16868386654    16868386881      501   565 W 31228184  12288     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage
+16868912497    16868913952        0     1 W 28587040   4096    launchd ??/testlog/iosnoop.log
+16868912538    16868914029        0     1 W 28587160  24576    launchd ??/testlog/iosnoop.log
+16868915616    16868916076        0     1 R  4182384   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868918446    16868918798        0     1 R  4182400   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868946940    16868947185        0     1 W 44535128   4096    launchd ??/log/authd.log
+16868961179    16868961311        0     1 W      880   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961208    16868961421        0     1 W     1064   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961234    16868961481        0     1 W     1080   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961260    16868961535        0     1 W     1384   4096    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961292    16868961580        0     1 W    80496   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961320    16868961624        0     1 W   559200   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961346    16868961674        0     1 W  3392112   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961372    16868961720        0     1 W  3404752   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961399    16868961767        0     1 W  3423520   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961424    16868961812        0     1 W  3505792   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961442    16868961857        0     1 W  3683104   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961462    16868961902        0     1 W  3688192   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961481    16868961953        0     1 W  3688480   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961498    16868961998        0     1 W  3696816   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961516    16868962043        0     1 W  3697008   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961533    16868962087        0     1 W  3701440   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961551    16868962131        0     1 W  3702096   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961568    16868962175        0     1 W  3702528   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961585    16868962226        0     1 W  3703120   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961603    16868962280        0     1 W  3707536   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961620    16868962321        0     1 W  3717616   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961639    16868962362        0     1 W  3721696   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961727    16868962404        0     1 W  3736128   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961770    16868962447        0     1 W  3751232   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961817    16868962490        0     1 W  4085968   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868962002    16868962538        0     1 W  4165648   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868962047    16868962578        0     1 W  4169520   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868962092    16868962617        0     1 W  4169536   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961862    16868962656        0     1 W  4161952   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961907    16868962695        0     1 W  4162192   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868961951    16868962734        0     1 W  4162368   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868962136    16868962785        0     1 W  4182384   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16868962180    16868962824        0     1 W  4182400   8192    launchd ??/<unknown (NULL v_parent)>/<unknown (NULL v_name)>
+16878243475    16878245600      501   565 W 28587208  16384     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16878245783    16878245954      501   565 W 28587208   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16878246089    16878246256      501   565 W 31228184  12288     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage
+16882918755    16882920714        0    68 W 28586864   8192  coreduetd ??/CoreDuet/coreduetd.db-wal
+16882921195    16882921341        0    68 W 28586872   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16882921242    16882921450        0    68 W 28587248  16384  coreduetd ??/CoreDuet/coreduetd.db-wal
+16882921344    16882921546      501   565 W 28587280  16384     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16882921657    16882921777      501   565 W 28587280   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
+16882921901    16882922047      501   565 W 31228184  12288     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage
+16882924369    16882924501        0    68 W 28587272   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16882924410    16882924575        0    68 W 28600584   4096  coreduetd ??/CoreDuet/coreduetd.db-wal
+16882924901    16882925089        0    68 W 28600584  32768  coreduetd ??/CoreDuet/coreduetd.db-wal
