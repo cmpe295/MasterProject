@@ -1,1 +1,4 @@
 push.sh
+*.pyc
+.pydevproject
+.project
