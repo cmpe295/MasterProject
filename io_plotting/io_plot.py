@@ -8,7 +8,7 @@ import json
 from matplotlib import pyplot
 from parse_io import parse_iosnoop
 from constants import TYPE_TIME2BLOCK, TYPE_TIME2SIZE
-from io_plotting.constants import TYPE_BLOCK2SIZE
+from constants import TYPE_BLOCK2SIZE
 
 def io_barchart(io_data, type):
     
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     16818242122    16818242345      501   565 W 28586352   4096     Safari ??/LocalStorage/https_www.youtube.com_0.localstorage-journal
     '''
     
-    io_data = parse_iosnoop(565, '/Users/dyao/Documents/workspace/MasterProject/io_plotting/testlog/iosnoop.log')
+    io_data = parse_iosnoop(0, './logs/io.log')
     print len(io_data)
     
     print json.dumps(io_data, indent=4)

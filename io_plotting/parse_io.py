@@ -16,7 +16,6 @@ def parse_iosnoop(pid, log_path):
     for line in log_content.split('\n'):
         # sudo iosnoop -st |tee /Users/dyao/Documents/workspace/MasterProject/io_plotting/testlog/iosnoop.log
         matcher = re.match(r'\s*(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\w)\s+(\d+)\s+(\d+)\s+(\w+)\s+(.*)\s*', line, re.IGNORECASE)
-
         
         if matcher != None:            
             time_start_us = int(matcher.group(1))
@@ -28,7 +27,7 @@ def parse_iosnoop(pid, log_path):
             size_byte = int(matcher.group(7))
             command = str(matcher.group(8))
             path_name = str(matcher.group(9))
-            if process_id == pid:
+            if pid ==0 or process_id == pid:
                 entry = {'STIME': time_start_us,
                          'TIME': time_end_us,
                          'UID': user_id,
@@ -41,7 +40,6 @@ def parse_iosnoop(pid, log_path):
                          }
                 filtered_data.append(entry) 
     log_f.close()
-    
     
     return filtered_data
         

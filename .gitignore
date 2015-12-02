@@ -2,3 +2,6 @@ push.sh
 *.pyc
 .pydevproject
 .project
+**/data
+**/logs
+**/*.html
