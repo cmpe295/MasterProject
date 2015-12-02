@@ -4,17 +4,13 @@ import sys
 import os
 import csv
 
-
 if(len(sys.argv)<2):
     print 'Valid arguments as bellow:'
     print '\t install'
     print '\t teragen 1g'
     print '\t terasort'
     print '\t iplot'
-    print '\t bplot1'
-    print '\t bplot2'
-    print '\t bplot3'
-    print '\t bplot4'
+    print '\t bplot'
     exit(1)
 
 command = sys.argv[1].lower();
@@ -52,23 +48,14 @@ if(command=='terasort'):
 if(command=='iplot'):
     os.system('python ./io_plotting/io_plot.py')
 
-if(command=='bplot1'):
-    os.system('python ./bokeh_plot/plot1.py')
-
-if(command=='bplot2'):
-    os.system('python ./bokeh_plot/plot2.py')
-
-if(command=='bplot3'):
-    os.system('python ./bokeh_plot/plot3.py')
-
-if(command=='bplot4'):
-    os.system('python ./bokeh_plot/plot4.py')
+if(command=='bplot'):
+    os.system('python ./bokeh_plot/plot.py')
 
 if(command=='parse'):
     log_file = open('./logs/io.log')
     log_content = log_file.read().split('\n');
     log_content.pop()
-    content_list = [log_content[0].split()]
+    content_list = []
     for line in log_content:
         each = line.split()
         try:
