@@ -18,8 +18,6 @@ if(len(sys.argv)<2):
 
 command = sys.argv[1].lower();
 curdir = os.getcwd()
-print command
-print curdir
 
 if(command=='install'):
     print 'Start to install TeraSort module'
