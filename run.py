@@ -9,6 +9,7 @@ if(len(sys.argv)<2):
     print '\t install'
     print '\t teragen 1g'
     print '\t terasort'
+    print '\t parse'
     print '\t iplot'
     print '\t bplot'
     exit(1)
