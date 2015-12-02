@@ -5,3 +5,4 @@ push.sh
 **/data
 **/logs
 **/*.html
+**/target
