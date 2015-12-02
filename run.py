@@ -2,6 +2,7 @@
 
 import sys
 import os
+import csv
 
 
 if(len(sys.argv)<2):
@@ -62,3 +63,21 @@ if(command=='bplot3'):
 
 if(command=='bplot4'):
     os.system('python ./bokeh_plot/plot4.py')
+
+if(command=='parse'):
+    log_file = open('./logs/io.log')
+    log_content = log_file.read().split('\n');
+    log_content.pop()
+    content_list = [log_content[0].split()]
+    for line in log_content:
+        each = line.split()
+        try:
+            if each[7]=='java':
+                content_list.append(each) 
+        except:
+            pass
+    csv_file = open('./logs/io.csv','wb')
+    csv_writer = csv.writer(csv_file)
+    csv_writer.writerows(content_list)
+    
+

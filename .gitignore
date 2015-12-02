@@ -6,3 +6,4 @@ push.sh
 **/logs
 **/*.html
 **/target
+.DS_Store
