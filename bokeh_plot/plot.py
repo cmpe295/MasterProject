@@ -68,7 +68,30 @@ def plot_size_time(dir,title):
     #r.line(dates, choam, color='#FB9A99', legend='CHOAM')
     plotting.show(r)  # open a browser
 
-def plot_addressOftime():       # Y: address, X: time
+def plot_addr_time(dir,title):       # Y: address, X: time
+    data = read_csv()
+    data_addr = map(lambda x: x, data.SIZE.tolist())
+    data_dir = data.D.tolist()
+    length = len(data_addr)
+    data_to_show = []
+    for i in range(0,length):
+        if(data_dir[i]==dir):
+            data_to_show.append(data_addr[i])
+    x = range(0,len(data_to_show))
+    y = data_to_show
+
+
+    TOOLS = "pan,wheel_zoom,box_zoom,reset,save"
+    plotting.output_file("/tmp/"+title+".html",title=title)
+    r = plotting.figure(x_axis_type = "datetime", tools=TOOLS)
+    r.title = title
+    r.grid.grid_line_alpha=0.3
+
+    r.line(x, y, color='#1F78B4', legend=title)
+    #r.line(dates, choam, color='#FB9A99', legend='CHOAM')
+    plotting.show(r)  # open a browser
+
+
     pass
 
 def plot_address_count():           #1: check address range count
@@ -140,4 +163,6 @@ if __name__ == '__main__':
 
     plot_size_time('R','read_size_time')
     plot_size_time('W','write_size_time')
+    plot_addr_time('R','read_addr_time')
+    plot_addr_time('W','write_addr_time')
     
