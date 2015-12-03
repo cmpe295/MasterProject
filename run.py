@@ -19,7 +19,7 @@ curdir = os.getcwd()
 
 if(command=='install'):
     print 'Start to install TeraSort module'
-    os.system('cd spark-terasort && mvn install')
+    #os.system('cd spark-terasort && mvn install')
     print 'Start to install matplotlib'
     os.system('pip install matplotlib')
     print 'Start to install bokeh'
