@@ -42,7 +42,13 @@ def plot_write_size_count():
 def plot_addressOftime():       # Y: address, X: time
     pass
 
+def plot_address_count():           #1: check address range count
+    pass
+
 def plot_seqOftime():           #1: random; 2: seq
+    pass
+
+def plot_dependencyOftime():           #1: check dependency
     pass
 
 def plot_read_type_pi():        #percentage of 4K, 16K, 64K IO.
