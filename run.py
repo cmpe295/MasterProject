@@ -60,7 +60,7 @@ if(command=='parse'):
     for line in log_content:
         each = line.split()
         try:
-            if each[7]=='java':
+            if each[7] in {'java','mdworker'}: 
                 content_list.append(each) 
         except:
             pass
