@@ -1,20 +1,13 @@
-from bokeh.charts import Histogram, output_file, show
+import bokeh.charts as charts
 import pandas
+
+import bokeh.plotting as plotting
 
 def read_csv():
     file = './logs/io.csv'
     colnames = ['STIME','TIME','UID','PID','D','BLOCK','SIZE','COMM','PATHNAME']
     data = pandas.read_csv(file,names = colnames)
     return data;
-
-def plot1():
-    data = read_csv()
-    data_size = map(lambda x: x/1024, data.SIZE.tolist())
-    #print sum(data_size)
-
-    p = Histogram(data_size,bins=100,title="data size distribution")
-    output_file("/tmp/plot.html",)
-    show(p)
 
 def plot_size_count(dir,title):
     data = read_csv()
@@ -27,17 +20,35 @@ def plot_size_count(dir,title):
             data_to_show.append(data_size[i])
     print "Total data:", sum(data_to_show) , "MB"
     
-    p = Histogram(data_to_show,bins=100,title=title)
+    p = charts.Histogram(data_to_show,bins=100,title=title)
 
-    output_file("/tmp/"+title+".html",)
+    charts.output_file("/tmp/"+title+".html",title=title)
 
-    show(p)
+    charts.show(p)
 
-def plot_read_size_count():
-    plot_size_count('R','read_size_count')
+def plot_size_time(dir,title):
+    data = read_csv()
+    data_size = map(lambda x: x/1024, data.SIZE.tolist())
+    data_dir = data.D.tolist()
+    length = len(data_size)
+    data_to_show = []
+    for i in range(0,length):
+        if(data_dir[i]==dir):
+            data_to_show.append(data_size[i])
+    x = range(0,len(data_to_show))
+    y = data_to_show
 
-def plot_write_size_count():
-    plot_size_count('W','write_size_count')
+
+    TOOLS = "pan,wheel_zoom,box_zoom,reset,save"
+    plotting.output_file("/tmp/"+title+".html",title=title)
+    r = plotting.figure(x_axis_type = "datetime", tools=TOOLS)
+    r.title = title
+    r.grid.grid_line_alpha=0.3
+
+    r.line(x, y, color='#1F78B4', legend=title)
+    #r.line(dates, choam, color='#FB9A99', legend='CHOAM')
+
+    plotting.show(r)  # open a browser
 
 def plot_addressOftime():       # Y: address, X: time
     pass
@@ -98,6 +109,8 @@ def plot_write_1024k_time():
 
 
 if __name__ == '__main__':
-    plot_read_size_count()
-    plot_write_size_count()
+    plot_size_count('R','read_size_count')
+    plot_size_count('W','write_size_count')
+    plot_size_time('R','read_size_time')
+    plot_size_time('W','write_size_time')
     
