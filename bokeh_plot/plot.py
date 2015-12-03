@@ -39,6 +39,57 @@ def plot_read_size_count():
 def plot_write_size_count():
     plot_size_count('W','write_size_count')
 
+def plot_addressOftime():       # Y: address, X: time
+    pass
+
+def plot_seqOftime():           #1: random; 2: seq
+    pass
+
+def plot_read_type_pi():        #percentage of 4K, 16K, 64K IO.
+    pass
+
+def plot_write_type_pi():
+    pass
+
+def plot_read_time_pi():        #percentage of 4K time, 16K time, 64K time
+    pass
+
+def plot_write_time_pi():
+    pass
+
+def plot_read_4k_time():
+    pass
+
+def plot_read_64k_time():
+    pass
+
+def plot_read_512k_time():
+    pass
+
+def plot_write_4k_time():
+    pass
+
+def plot_write_64k_time():
+    pass
+
+def plot_write_230k_time():
+    pass
+
+def plot_write_240k_time():
+    pass
+
+def plot_write_420k_time():
+    pass
+
+def plot_write_430k_time():
+    pass
+
+def plot_write_960k_time():
+    pass
+
+def plot_write_1024k_time():
+    pass
+
 
 if __name__ == '__main__':
     plot_read_size_count()
