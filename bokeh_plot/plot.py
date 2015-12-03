@@ -91,9 +91,6 @@ def plot_addr_time(dir,title):       # Y: address, X: time
     #r.line(dates, choam, color='#FB9A99', legend='CHOAM')
     plotting.show(r)  # open a browser
 
-
-    pass
-
 def plot_address_count():           #1: check address range count
     pass
 
