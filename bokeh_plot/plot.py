@@ -22,7 +22,7 @@ def plot_size_count(dir,title):
     print "Total data:", sum(data_to_show) , "MB"
     
     
-    p = charts.Histogram(data_to_show,bins=100,title=title)
+    p = charts.Histogram(data_to_show,bins=100,color='#FB9A99',title=title)
     charts.output_file("/tmp/"+title+".html",title=title)
     charts.show(p)
 
@@ -40,7 +40,7 @@ def plot_shuffle_size_count(dir,title):
     print "Total shuffle data:", sum(data_to_show) , "MB"
     
     
-    p = charts.Histogram(data_to_show,bins=100,title=title)
+    p = charts.Histogram(data_to_show,bins=100,color='#1F78B4',title=title)
     charts.output_file("/tmp/"+title+".html",title=title)
     charts.show(p)
 
