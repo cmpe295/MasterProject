@@ -48,6 +48,6 @@ def parse_iosnoop(pid, log_path):
         
 if __name__ == '__main__':
     
-    ret_obj = parse_iosnoop(565, '/Users/dyao/Documents/workspace/MasterProject/io_plotting/testlog/iosnoop.log')
+    ret_obj = parse_iosnoop(718, '/Users/dyao/Documents/workspace/MasterProject/io_plotting/testlog/iosnoop.log')
     print json.dumps(ret_obj, indent=4)
     
