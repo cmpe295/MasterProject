@@ -2,3 +2,8 @@ push.sh
 *.pyc
 .pydevproject
 .project
+**/data
+**/logs
+**/*.html
+**/target
+.DS_Store
