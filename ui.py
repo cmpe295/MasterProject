@@ -1,4 +1,5 @@
 import wx
+import "./Gen.py"
 
 class Menu(wx.Frame):
 
@@ -131,11 +132,12 @@ class Menu(wx.Frame):
 
     def onClose(self, event):
         self.result = {'name': self.nameVar, 'io_intensive': self.ioIntensiveVar,
-         'start_range': self.startAddressVar, 'end_range': self.endAddressVar,
+         'range': (self.startAddressVar, self.endAddressVar),
          'count': self.ioCountVar, 'write_percetage': self.writePercentageVar,
          'write_ran_percentage': self.randomWritePercentageVar,
          'read_ran_percentage': self.randomReadPercentageVar}
         print(self.result)
+        Gen.gen(self.result)
         self.Close()
 
 
