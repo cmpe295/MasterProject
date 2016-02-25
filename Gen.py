@@ -123,6 +123,9 @@ class Gen():
         while self.done_count < self.config['count']:
             item = self.gen_items()
             self.output.extend(item)
+        self.print_done_cnt()
+
+
 
     def print_done_cnt(self):
         print "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
@@ -136,13 +139,14 @@ if __name__ == '__main__':
   
     myGen = Gen({
         'range': (1,21111),
-        'count': 10000,
+        'count': 100,
         'write_percent': 0.6,
         'write_ran_percent': 0.5,
         'read_ran_percent': 0.9
     })
     myGen.gen()
+    print myGen.output
 
-    for v in myGen.output:
-        print v
-    myGen.print_done_cnt()
+    #for v in myGen.output:
+        #print v
+    #myGen.print_done_cnt()

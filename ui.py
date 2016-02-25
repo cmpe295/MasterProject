@@ -1,5 +1,6 @@
+#!/usr/local/bin/python2.7
 import wx
-import "./Gen.py"
+from Gen import Gen
 
 class Menu(wx.Frame):
 
@@ -132,13 +133,15 @@ class Menu(wx.Frame):
 
     def onClose(self, event):
         self.result = {'name': self.nameVar, 'io_intensive': self.ioIntensiveVar,
-         'range': (self.startAddressVar, self.endAddressVar),
-         'count': self.ioCountVar, 'write_percetage': self.writePercentageVar,
-         'write_ran_percentage': self.randomWritePercentageVar,
-         'read_ran_percentage': self.randomReadPercentageVar}
+         'range': (int(self.startAddressVar), int(self.endAddressVar)),
+         'count': int(self.ioCountVar), 'write_percent': float(self.writePercentageVar),
+         'write_ran_percent': float(self.randomWritePercentageVar),
+         'read_ran_percent': float(self.randomReadPercentageVar)}
         print(self.result)
-        Gen.gen(self.result)
-        self.Close()
+
+        myGen = Gen(self.result)
+        myGen.gen()
+
 
 
 if __name__ == '__main__':
