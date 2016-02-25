@@ -142,8 +142,6 @@ class Menu(wx.Frame):
         myGen = Gen(self.result)
         myGen.gen()
 
-
-
 if __name__ == '__main__':
     app = wx.App()
     Menu(None, title="IO Generator")
