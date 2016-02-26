@@ -2,150 +2,134 @@
 #from scipy import stats
 import numpy as np
 
-class Gen():
+class Buffer():
     def __init__(self, config):    
-        self.config = config
-        self.output = []
-        self.done_count = 0
-        self.addr_range = np.arange(self.config['range'][0],self.config['range'][1],1)
-        self.cur_dir = 'W'
-        self.cur_addr = 0
-        self.cur_size = 4*1024;
-        self.dir_arr = ['W','R']
-        self.write_size_arr = [4*1024, 64*1024, 512*1024, 1024*1024]    #put this as input configuration
-        self.read_size_arr  = [4*1024, 64*1024, 512*1024, 1024*1024]     #put this as input configuration
-        self.seq_length_arr =     [20, 40, 60, 80, 100,200,300,400]
-        self.seq_length_percent = [0.3,0.3,0.2,0.2,0.0,0.0,0.0,0.0]
-        self.cur_seq = False
-        self.seq_threshold = 512*1024
-        self.block_size = 512
-        self.read_seq_len_factor = 0
-        self.write_seq_len_factor = 0
-        self.done_write_seq_cnt = 0;
-        self.done_write_ran_cnt = 0;
-        self.done_read_seq_cnt = 0;
-        self.done_read_ran_cnt = 0;
-        for i in range(0,len(self.seq_length_arr)):
-            self.read_seq_len_factor += self.seq_length_arr[i]*self.seq_length_percent[i]
-        for i in range(0,len(self.seq_length_arr)):
-            self.write_seq_len_factor += self.seq_length_arr[i]*self.seq_length_percent[i]
+        self.capacity = config['capacity']
+        self.full_threshold = self.capacity * float(config['full_watermark'])
+        self.hot_watermark = config['hot_watermark']
+        self.size = 0
+        self.addr_map = {}
 
-    #percent is write percent
-    def gen_dir(self,write_percent):
-        if write_percent > 1 or write_percent < 0:
-            print "ERROR input: write_percent:", write_percent
-            return '-'
-        else:
-            self.cur_dir = np.random.choice(self.dir_arr,1,p=[write_percent,1-write_percent])[0]
-            return self.cur_dir;
+    def get_size(self):
+        return self.size;
 
-    def gen_addr(self):
-        self.cur_addr =  np.random.choice(self.addr_range,1)[0]
-        return self.cur_addr
+    def check_empty(self):
+        return self.size == 0
 
-    def gen_size(self):
-        size_arr = []
-        ran_percent = 0;
-        percent1 = 0;
-        percent2 = 0;
-        percent3 = 0;
-        percent4 = 1;
-        if self.cur_dir == 'W':
-            size_arr = self.write_size_arr
-            write_seq_percent_factor =  self.config['write_ran_percent']*self.write_seq_len_factor
-            ran_percent = write_seq_percent_factor/(1-self.config['write_ran_percent']+write_seq_percent_factor)
-            percent1 = float(ran_percent)*3/4;
-            percent2 = float(ran_percent)/4;
-            percent3 = float(1-ran_percent)/3;
-            percent4 = 1 - (percent1 + percent2 + percent3)
-        else:
-            size_arr = self.read_size_arr
-            read_seq_percent_factor =  self.config['read_ran_percent']*self.read_seq_len_factor
-            ran_percent = read_seq_percent_factor/(1-self.config['read_ran_percent']+read_seq_percent_factor)
-            #ran_percent = self.config['read_ran_percent']
-            percent1 = float(ran_percent)*2/3;
-            percent2 = float(ran_percent)/3;
-            percent3 = float(1-ran_percent)/2;
-            percent4 = 1 - (percent1 + percent2 + percent3)
+    def check_full(self):
+        return self.size >= self.capacity
 
-        self.cur_size = np.random.choice(size_arr,1,p=[percent1,percent2,percent3,percent4])[0]
-        self.cur_seq = self.cur_size >= self.seq_threshold
-        return self.cur_size
+    def check_almost_full(self):
+        return self.size >= self.full_threshold
 
-    #generate items(array):
-    # (1)if random: generate items with only one element
-    # (2)if sequence: generate multiple I/O
-    def gen_items(self):
-        items = []
-        #start sequential IO
-        if self.cur_seq:
-            self.cur_seq = False
-            length = np.random.choice(self.seq_length_arr,1,p=self.seq_length_percent)[0]
-            for i in range(0,length):
-                item = (self.cur_dir,
-                        self.cur_addr + self.cur_size/self.block_size,
-                        self.cur_size
-                        )
-                self.done_count += 1
-                items.append(item)
-                self.cur_addr += int(self.cur_size/self.block_size);
+    def translate_addr(self,addr):
+        #translate from 512 bytes to 4KB
+        newAddr = [addr[0]//8,addr[1]//8]
+        return newAddr;
 
-                
-                if self.cur_dir=='W':
-                    self.done_write_seq_cnt +=1;
-                if self.cur_dir=='R':
-                    self.done_read_seq_cnt +=1;
-        
-        #another dice to decide random or sequential I/O
-        else:
-            item = (self.gen_dir(self.config['write_percent']),
-                    self.gen_addr(),
-                    self.gen_size()
-                    )
-            self.done_count += 1
-            items.append(item)
+    def translate_addr_back(self,addr):
+        #translate from 4kb to 512byte
+        newAddr = [addr[0]*8,addr[1]*8]
+        return newAddr;
 
-            if self.cur_dir=='W':
-                if self.cur_size >= self.seq_threshold:
-                    self.done_write_seq_cnt += 1
+
+    def add(self,addr):
+        # Buffer user need to check Buffer almost full before adding a new entry
+        if self.check_almost_full():
+            return False
+
+        realAddr = self.translate_addr(addr)
+        for each in range(realAddr[0],realAddr[1]):
+            if each not in self.addr_map:
+                self.addr_map[each] = 1
+                self.size += 1
+            else:
+                self.addr_map[each] += 1
+        return True
+
+    def remove(self,addr):
+        realAddr = self.translate_addr(addr)
+        for each in range(realAddr[0],realAddr[1]):
+            if each not in self.addr_map:
+                print "ERROR: trying to remove an address which is not in the buffer"
+                return False
+            else:
+                del self.addr_map[each]
+                self.size -= 1;
+        return True
+
+    def get_data(self,watermark):
+        coldAddr = []
+        if not self.check_empty():
+            preEndAddr = -1
+            for key in self.addr_map:
+                startAddr = key
+                endAddr = key+1
+                if startAddr == preEndAddr:
+                    coldAddr[-1][1] += 1
                 else:
-                    self.done_write_ran_cnt += 1;
-            if self.cur_dir=='R':
-                if self.cur_size >= self.seq_threshold:
-                    self.done_read_seq_cnt += 1
-                else:
-                    self.done_read_ran_cnt += 1;
+                    if self.addr_map[key] < watermark:
+                        coldAddr.append([startAddr,endAddr])
+                        preEndAddr = endAddr
+                    else:
+                        pass
+        for i in range(0,len(coldAddr)):
+            coldAddr[i] = self.translate_addr_back(coldAddr[i])
+        return coldAddr
 
-        return items;
+    def get_cold(self):
+        if self.check_empty():
+            return []
+        addrs = self.get_data(self.hot_watermark*1)
+        if len(addrs):
+            return addrs;
 
-    #generate the final array
-    def gen(self):
-        while self.done_count < self.config['count']:
-            item = self.gen_items()
-            self.output.extend(item)
-        self.print_done_cnt()
-        
+        addrs = self.get_data(self.hot_watermark*2)
+        if len(addrs):
+            return addrs;
 
-    def print_done_cnt(self):
+        addrs = self.get_data(self.hot_watermark*4)
+        if len(addrs):
+            return addrs;
+
+        addrs = self.get_data(self.hot_watermark*8)
+        if len(addrs):
+            return addrs;
+
+        addrs = self.get_data(self.hot_watermark*16)
+        if len(addrs):
+            return addrs;
+
+        addrs = self.get_data(self.hot_watermark*32)
+        if len(addrs):
+            return addrs;
+
+        return self.get_all()
+
+    def get_all(self):
+        return self.get_data(-1)
+
+    def print_result(self):
         print "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-        print "final percentage of write", float(self.done_write_seq_cnt + self.done_write_ran_cnt)/self.config['count']
-        print "final percentage of write random:", float(self.done_write_ran_cnt)/(self.done_write_seq_cnt+self.done_write_ran_cnt)
-        print "final percentage of read random:", float(self.done_read_ran_cnt)/(self.done_read_seq_cnt+self.done_read_ran_cnt)
         print "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
 
 if __name__ == '__main__':
-  
-    myGen = Gen({
-        'range': (1,21111),
-        'count': 100,
-        'write_percent': 0.6,
-        'write_ran_percent': 0.5,
-        'read_ran_percent': 0.9
+    myBuffer = Buffer({
+        'capacity': 1000,       #how many 4K IO
+        'full_watermark': 0.85,
+        'hot_watermark': 4
     })
-    myGen.gen()
-    print myGen.output
 
-    #for v in myGen.output:
-        #print v
-    #myGen.print_done_cnt()
+    myBuffer.add([0,8])
+    myBuffer.add([0,8])
+    myBuffer.add([0,8])
+    myBuffer.add([8,16])
+    myBuffer.add([8,16])
+    myBuffer.add([8,16])
+    print myBuffer.addr_map
+    print "cold data:",myBuffer.get_cold()
+    print myBuffer.addr_map
+    myBuffer.remove(myBuffer.get_cold()[0])
+    print myBuffer.addr_map
+    print myBuffer.get_cold()
