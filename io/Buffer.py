@@ -35,6 +35,7 @@ class Buffer():
         # Buffer user need to check Buffer almost full before adding a new entry
         if self.check_almost_full():
             return False
+        print "add addr:", addr
 
         realAddr = self.translate_addr(addr)
         for each in range(realAddr[0],realAddr[1]):
@@ -60,19 +61,22 @@ class Buffer():
         coldAddr = []
         if not self.check_empty():
             preEndAddr = -1
-            for key in self.addr_map:
+            for key in sorted(self.addr_map.keys()):
                 startAddr = key
                 endAddr = key+1
+                #TODO: check to make sure the command length does not exceed ATA command length
                 if startAddr == preEndAddr:
                     coldAddr[-1][1] += 1
+                    preEndAddr += 1
                 else:
-                    if self.addr_map[key] < watermark:
+                    if watermark < 0  or self.addr_map[key] < watermark:
                         coldAddr.append([startAddr,endAddr])
                         preEndAddr = endAddr
                     else:
                         pass
         for each in coldAddr:
             self.remove(each)
+        print "coldAddr: ",coldAddr
         return coldAddr
 
     def get_cold(self):
@@ -122,9 +126,9 @@ if __name__ == '__main__':
     myBuffer.add([0,1])
     myBuffer.add([0,1])
     myBuffer.add([0,1])
-    myBuffer.add([8,2])
-    myBuffer.add([8,2])
-    myBuffer.add([8,2])
+    myBuffer.add([1,2])
+    myBuffer.add([1,2])
+    myBuffer.add([1,2])
     print myBuffer.addr_map
     print "cold data:",myBuffer.get_cold()
     print myBuffer.addr_map

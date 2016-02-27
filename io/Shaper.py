@@ -34,9 +34,7 @@ class Shaper():
         for each in arrs:
             if each[0]=='W':
                 #TODO: big file, dont put into cache, need to invalidate the data in cache if cache hit
-                if self.myBuffer.add([each[1],each[1]+each[2]]):
-                    pass
-                else:
+                while not self.myBuffer.add([each[1],each[1]+each[2]]):
                     ios = self.myBuffer.get_cold()
                     self.gen_write_io(ios)
             else:
