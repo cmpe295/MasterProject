@@ -17,7 +17,7 @@ class Wrapper():
         colnames = ['STIME','TIME','UID','PID','D','BLOCK','SIZE','COMM','PATHNAME']
         data = pandas.read_csv(self.data,names = colnames)
         data_dir = data.D.tolist()
-        data_addr = data.BLOCK.tolist()
+        data_addr = map(lambda x: x*512, data.BLOCK.tolist())
         data_size = data.SIZE.tolist()
         arrs = []
         length = len(data_dir)

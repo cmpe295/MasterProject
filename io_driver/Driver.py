@@ -19,6 +19,7 @@ class Driver():
 
     def read(self,addr,size):
         self.disk.seek(addr)
+        os.fsync(self.disk)
         return self.disk.read(size)
 
     def write(self,addr,size):
@@ -37,7 +38,7 @@ class Driver():
             self.disk.write(buffer(self.dummy,0,size))
         else:
             self.disk.read(size)
-
+        os.fsync(self.disk)
 
 
 if __name__ == '__main__':
