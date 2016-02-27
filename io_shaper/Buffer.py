@@ -23,13 +23,11 @@ class Buffer():
         return self.size >= self.full_threshold
 
     def translate_addr(self,addr):
-        #translate from 512 bytes to 4KB
-        newAddr = [addr[0]//8,addr[1]//8]
+        newAddr = addr 
         return newAddr;
 
     def translate_addr_back(self,addr):
-        #translate from 4kb to 512byte
-        newAddr = [addr[0]*8,addr[1]*8]
+        newAddr = addr 
         return newAddr;
 
 
@@ -48,7 +46,7 @@ class Buffer():
         return True
 
     def remove(self,addr):
-        realAddr = self.translate_addr(addr)
+        realAddr = self.translate_addr_back(addr)
         for each in range(realAddr[0],realAddr[1]):
             if each not in self.addr_map:
                 print "ERROR: trying to remove an address which is not in the buffer"
@@ -73,8 +71,8 @@ class Buffer():
                         preEndAddr = endAddr
                     else:
                         pass
-        for i in range(0,len(coldAddr)):
-            coldAddr[i] = self.translate_addr_back(coldAddr[i])
+        for each in coldAddr:
+            self.remove(each)
         return coldAddr
 
     def get_cold(self):
@@ -121,15 +119,14 @@ if __name__ == '__main__':
         'hot_watermark': 4
     })
 
-    myBuffer.add([0,8])
-    myBuffer.add([0,8])
-    myBuffer.add([0,8])
-    myBuffer.add([8,16])
-    myBuffer.add([8,16])
-    myBuffer.add([8,16])
+    myBuffer.add([0,1])
+    myBuffer.add([0,1])
+    myBuffer.add([0,1])
+    myBuffer.add([8,2])
+    myBuffer.add([8,2])
+    myBuffer.add([8,2])
     print myBuffer.addr_map
     print "cold data:",myBuffer.get_cold()
     print myBuffer.addr_map
-    myBuffer.remove(myBuffer.get_cold()[0])
     print myBuffer.addr_map
     print myBuffer.get_cold()
