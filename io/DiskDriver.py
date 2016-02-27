@@ -40,9 +40,11 @@ class DiskDriver():
 if __name__ == '__main__':
     myDiskDriver = DiskDriver()
     myDiskDriver.open('./output/gen.csv','/dev/disk2')
+    print "Start drive IO to disk:"
     myDiskDriver.run()
     print "Running time before optimize in s:", myDiskDriver.get_time()
 
     myDiskDriver.open('./output/optimize.csv','/dev/disk2')
+    print "Start drive IO to disk:"
     myDiskDriver.run()
     print "Running time after optimize in s:", myDiskDriver.get_time()
