@@ -5,7 +5,7 @@ from Gen import Gen
 class Menu(wx.Frame):
 
     def __init__(self, parent, title):
-        super(Menu, self).__init__(parent, title=title, size=(400, 400))
+        super(Menu, self).__init__(parent, title=title, size=(300, 400))
 
         self.InitUI()
         self.Centre()
