@@ -31,7 +31,7 @@ class Shaper():
         self.out_csv = out_csv
         for each in arrs:
             if each[0]=='W':
-                #TODO: big file, dont put into cache, need to invalidate cache hit
+                #TODO: big file, dont put into cache, need to invalidate the data in cache if cache hit
                 if self.myBuffer.add([each[1],each[1]+each[2]]):
                     print "-"
                     pass
@@ -40,7 +40,7 @@ class Shaper():
                     ios = self.myBuffer.get_cold()
                     self.gen_write_io(ios)
             else:
-                #TODO: check cache hit
+                #TODO: check cache hit, if hit, return data immediately instead of generate read io
                 ios = [[each[1],each[2]]]
                 self.gen_read_io(ios)
 
