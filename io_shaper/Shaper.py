@@ -3,6 +3,7 @@ import sys,os
 import time
 from Buffer import Buffer
 import pandas
+import csv
 
 class Shaper():
 
@@ -11,6 +12,7 @@ class Shaper():
         self.out_csv = ''
         self.in_io_count = 0
         self.out_io_count = 0
+        self.csv_row = ['-','-',0,0,0,0,0,'hadoop','bin/spark']
 
     def read_csv(self,in_csv):
         colnames = ['STIME','TIME','UID','PID','D','BLOCK','SIZE','COMM','PATHNAME']
@@ -28,15 +30,13 @@ class Shaper():
 
     def run(self,in_csv,out_csv):
         arrs = self.read_csv(in_csv)
-        self.out_csv = out_csv
+        self.out_csv = open('../logs/optimization.csv','wb')
         for each in arrs:
             if each[0]=='W':
                 #TODO: big file, dont put into cache, need to invalidate the data in cache if cache hit
                 if self.myBuffer.add([each[1],each[1]+each[2]]):
-                    print "-"
                     pass
                 else:
-                    print "+"
                     ios = self.myBuffer.get_cold()
                     self.gen_write_io(ios)
             else:
@@ -49,14 +49,21 @@ class Shaper():
 
     def gen_write_io(self,ios):
         for each in ios:
-            self.write_csv(each)
+            self.write_csv(['W',each[0],each[1]])
 
     def gen_read_io(self,ios):
         for each in ios:
-            self.write_csv(each)
+            self.write_csv(['R',each[0],each[1]])
 
     def write_csv(self,item):
-        pass
+        content_list = []
+        colnames = ['STIME','TIME','UID','PID','D','BLOCK','SIZE','COMM','PATHNAME']
+        self.csv_row[4] = item[0]
+        self.csv_row[5] = item[1]*8
+        self.csv_row[6] = item[2]*4096
+        content_list.append(self.csv_row) 
+        csv_writer = csv.writer(self.out_csv)
+        csv_writer.writerows(content_list)
 
     def print_io_count(self):
         print "=========================================================="
