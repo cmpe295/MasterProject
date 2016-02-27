@@ -1,6 +1,7 @@
 #!/usr/local/bin/python2.7
 #from scipy import stats
 import numpy as np
+import csv
 
 class Gen():
     def __init__(self, config):    
@@ -118,11 +119,24 @@ class Gen():
 
         return items;
 
+    def write_csv(self,items,file):
+        out_csv = open(file,'wb')
+        content_list = []
+        for item in items:
+            csv_row = ['-','-',0,0,0,0,0,'hadoop','bin/spark']
+            csv_row[4] = item[0]
+            csv_row[5] = item[1]
+            csv_row[6] = item[2]
+            content_list.append(csv_row) 
+        csv_writer = csv.writer(out_csv)
+        csv_writer.writerows(content_list)
+
     #generate the final array
     def gen(self):
         while self.done_count < self.config['count']:
             item = self.gen_items()
             self.output.extend(item)
+        self.write_csv(self.output,'./gen.csv')
         self.print_done_cnt()
         
 

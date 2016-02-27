@@ -57,7 +57,6 @@ class Shaper():
 
     def write_csv(self,item):
         content_list = []
-        colnames = ['STIME','TIME','UID','PID','D','BLOCK','SIZE','COMM','PATHNAME']
         self.csv_row[4] = item[0]
         self.csv_row[5] = item[1]*8
         self.csv_row[6] = item[2]*4096
