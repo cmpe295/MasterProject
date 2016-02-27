@@ -26,6 +26,7 @@ class Gen():
         self.done_write_ran_cnt = 0;
         self.done_read_seq_cnt = 0;
         self.done_read_ran_cnt = 0;
+        self.output_file = './output/gen.csv'
         for i in range(0,len(self.seq_length_arr)):
             self.read_seq_len_factor += self.seq_length_arr[i]*self.seq_length_percent[i]
         for i in range(0,len(self.seq_length_arr)):
@@ -136,7 +137,7 @@ class Gen():
         while self.done_count < self.config['count']:
             item = self.gen_items()
             self.output.extend(item)
-        self.write_csv(self.output,'./gen.csv')
+        self.write_csv(self.output,self.output_file)
         self.print_done_cnt()
         
 

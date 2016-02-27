@@ -14,9 +14,9 @@ class Shaper():
         self.out_io_count = 0
         self.csv_row = ['-','-',0,0,0,0,0,'hadoop','bin/spark']
 
-    def read_csv(self,in_csv):
+    def read_csv(self,in_file):
         colnames = ['STIME','TIME','UID','PID','D','BLOCK','SIZE','COMM','PATHNAME']
-        data = pandas.read_csv(in_csv,names = colnames)
+        data = pandas.read_csv(in_file,names = colnames)
         data_dir = data.D.tolist()
         data_addr = map(lambda x: x//8, data.BLOCK.tolist())
         data_size = map(lambda x: x//4096, data.SIZE.tolist())
@@ -28,9 +28,9 @@ class Shaper():
             arrs.append([data_dir[i],data_addr[i],data_size[i]])
         return arrs
 
-    def run(self,in_csv,out_csv):
-        arrs = self.read_csv(in_csv)
-        self.out_csv = open('../logs/optimization.csv','wb')
+    def run(self,in_file,out_file):
+        arrs = self.read_csv(in_file)
+        self.out_csv = open(out_file,'wb')
         for each in arrs:
             if each[0]=='W':
                 #TODO: big file, dont put into cache, need to invalidate the data in cache if cache hit
@@ -80,5 +80,5 @@ if __name__ == '__main__':
         'full_watermark': 0.85,
         'hot_watermark': 4
     })
-    myShaper.run('../logs/io.csv','../logs/optimize.csv')
+    myShaper.run('./output/gen.csv','./output/optimize.csv')
     myShaper.print_io_count()
