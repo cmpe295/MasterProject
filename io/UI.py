@@ -72,18 +72,21 @@ class Menu(wx.Frame):
         text5 = wx.StaticText(panel, label="Write Percentage")
         sizer.Add(text5, pos=(6, 0), flag=wx.LEFT|wx.TOP, border=10)
         self.tc5 = wx.TextCtrl(panel)
+        self.tc5.SetHint('Ex: 0.5')
         sizer.Add(self.tc5, pos=(6, 1), span=(1, 1), flag=wx.TOP, border=5)
         self.Bind(wx.EVT_TEXT, self.writePercentage, self.tc5)
 
         text6 = wx.StaticText(panel, label="Random Write Percentage")
         sizer.Add(text6, pos=(7, 0), flag=wx.LEFT|wx.TOP, border=10)
         self.tc6 = wx.TextCtrl(panel)
+        self.tc6.SetHint('Ex: 0.5')
         sizer.Add(self.tc6, pos=(7, 1), span=(1, 1), flag=wx.TOP, border=5)
         self.Bind(wx.EVT_TEXT, self.randomWritePercentage, self.tc6)
 
         text7 = wx.StaticText(panel, label="Random Read Percentage")
         sizer.Add(text7, pos=(8, 0), flag=wx.LEFT|wx.TOP, border=10)
         self.tc7 = wx.TextCtrl(panel)
+        self.tc7.SetHint('Ex: 0.5')
         sizer.Add(self.tc7, pos=(8, 1), span=(1, 1), flag=wx.TOP, border=5)
         self.Bind(wx.EVT_TEXT, self.randomReadPercentage, self.tc7)
 
