@@ -13,6 +13,7 @@ class Driver():
     def open(self,target):
         self.target = target
         os.system('sudo diskutil unmountDisk ' + self.target)
+        print self.target
         self.disk = file(self.target,'rb+')
 
     def close(self):
