@@ -22,7 +22,6 @@ class Shaper():
         data_size = map(lambda x: x//4096, data.SIZE.tolist())
         arrs = []
         length = len(data_dir)
-        self.in_io_count = length
         self.start_time = time.time()
         for i in range(0,length):
             arrs.append([data_dir[i],data_addr[i],data_size[i]])
@@ -30,6 +29,7 @@ class Shaper():
 
     def run(self,in_file,out_file):
         arrs = self.read_csv(in_file)
+        self.in_io_count = len(arrs)
         self.out_csv = open(out_file,'wb')
         for each in arrs:
             if each[0]=='W':
@@ -44,6 +44,10 @@ class Shaper():
 
         #clear all data in Buffer
         ios = self.myBuffer.get_all();
+        self.gen_write_io(ios)
+
+        arrs = self.read_csv(out_file)
+        self.out_io_count = len(arrs)
 
     def gen_write_io(self,ios):
         for each in ios:

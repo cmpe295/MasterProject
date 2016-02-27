@@ -1,12 +1,14 @@
 #!/usr/local/bin/python2.7
 import sys,os
 import time
+import logging
 
 class Driver():
 
     def __init__(self):
         self.target = ''
         self.dummy = bytearray(['2']*10000000)
+        logging.basicConfig(level=logging.DEBUG)
 
     def open(self,target):
         self.target = target
@@ -36,8 +38,10 @@ class Driver():
         self.disk.seek(addr)
         if(d=='W'):
             self.disk.write(buffer(self.dummy,0,size))
+            logging.debug("(W)--->>>: addr: %d, size: %d",addr,size)
         else:
             self.disk.read(size)
+            logging.debug("(R)<<<---: addr: %d, size: %d",addr,size)
         os.fsync(self.disk)
 
 
