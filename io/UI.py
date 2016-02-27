@@ -92,7 +92,7 @@ class Menu(wx.Frame):
 
 
         button4 = wx.Button(panel, label="Ok")
-        sizer.Add(button4, pos=(10, 2))
+        sizer.Add(button4, pos=(10, 1.5))
         button4.Bind(wx.EVT_BUTTON, self.onClose)
         
         button5 = wx.Button(panel, label="Clear")
