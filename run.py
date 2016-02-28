@@ -67,5 +67,3 @@ if(command=='parse'):
     csv_file = open('./logs/io.csv','wb')
     csv_writer = csv.writer(csv_file)
     csv_writer.writerows(content_list)
-    
-
