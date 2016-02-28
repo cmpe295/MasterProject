@@ -4,25 +4,104 @@ import pandas
 import bokeh.plotting as plotting
 
 def read_csv():
-    file = './logs/io.csv'
+    #file = './logs/io.csv'
+    file = './output/gen.csv'
     colnames = ['STIME','TIME','UID','PID','D','BLOCK','SIZE','COMM','PATHNAME']
     data = pandas.read_csv(file,names = colnames)
     return data;
 
-def plot_read_addr_count():
-    pass
+def plot_addr_count(direction, title):
+    data = read_csv()
+    data_addr = data.BLOCK.tolist()
+    data_dir = data.D.tolist()
+    map_dir2addr = zip(data_dir, data_addr)
 
-def plot_write_addr_count():
-    pass
+    if direction == 'R':
+        dic_out = []
+        for item in map_dir2addr:
+            if item[0]=='R':
+                dic_out.append(item[1])
+    elif direction == 'W':
+        dic_out = []
+        for item in map_dir2addr:
+            if item[0]=='W':
+                dic_out.append(item[1])
 
-def plot_read_time_addr():
-    pass
+    p = charts.Histogram(dic_out, bins=100, color='#FB9A99', title=title)
+    charts.output_file("/tmp/%s.html" % title)
+    charts.show(p)
 
-def plot_write_time_addr():
-    pass
+def plot_time_addr(direction, title):
+    data = read_csv()
+    data_addr = zip(data.D.tolist(), data.BLOCK.tolist())
+    data_time = zip(data.D.tolist(), range(0, len(data_addr)))
 
-def plot_time_size():
-    pass 
+    print data_addr
+    print data_time
+
+    if direction == 'R':
+        x = []
+        y = []
+        for item in data_addr:
+            if item[0]=='R':
+                y.append(item[1])
+        for item in data_time:
+            if item[0]=='R':
+                x.append(item[1])
+    if direction == 'W':
+        x = []
+        y = []
+        for item in data_addr:
+            if item[0]=='W':
+                y.append(item[1])
+        for item in data_time:
+            if item[0]=='W':
+                x.append(item[1])
+
+
+    plotting.output_file('/tmp/%s.html' % title)
+    r = plotting.figure(x_axis_type='datetime')
+    r.title = title
+
+    r.line(x, y)
+    plotting.show(r)
+
+
+def plot_time_size(direction, title):
+    data = read_csv()
+    data_size = zip(data.D.tolist(), data.SIZE.tolist())
+    data_time = zip(data.D.tolist(), range(0, len(data_size)))
+
+    print data_size
+    print data_time
+
+    if direction == 'R':
+        x = []
+        y = []
+        for item in data_size:
+            if item[0]=='R':
+                y.append(item[1])
+        for item in data_time:
+            if item[0]=='R':
+                x.append(item[1])
+    if direction == 'W':
+        x = []
+        y = []
+        for item in data_size:
+            if item[0]=='W':
+                y.append(item[1])
+        for item in data_time:
+            if item[0]=='W':
+                x.append(item[1])
+
+
+    plotting.output_file('/tmp/%s.html' % title)
+    r = plotting.figure(x_axis_type='datetime')
+    r.title = title
+
+    r.line(x, y)
+    plotting.show(r)
+
 
 
 
@@ -37,8 +116,8 @@ def plot_size_count(dir,title):
             data_to_show.append(data_size[i])
 
     print "Total data:", sum(data_to_show) , "MB"
-    
-    
+
+
     p = charts.Histogram(data_to_show,bins=100,color='#FB9A99',title=title)
     charts.output_file("/tmp/"+title+".html",title=title)
     charts.show(p)
@@ -55,8 +134,8 @@ def plot_shuffle_size_count(dir,title):
             data_to_show.append(data_size[i])
 
     print "Total shuffle data:", sum(data_to_show) , "MB"
-    
-    
+
+
     p = charts.Histogram(data_to_show,bins=100,color='#1F78B4',title=title)
     charts.output_file("/tmp/"+title+".html",title=title)
     charts.show(p)
@@ -170,13 +249,20 @@ def plot_write_1024k_time():
 
 
 if __name__ == '__main__':
-    plot_size_count('R','read_size_count')
-    plot_shuffle_size_count('R','read_shuffle_size_count')
-    plot_size_count('W','write_size_count')
-    plot_shuffle_size_count('W','write_shuffle_size_count')
+#    plot_size_count('R','read_size_count')
+#    plot_shuffle_size_count('R','read_shuffle_size_count')
+#    plot_size_count('W','write_size_count')
+#    plot_shuffle_size_count('W','write_shuffle_size_count')
+#
+#    plot_size_time('R','read_size_time')
+#    plot_size_time('W','write_size_time')
+#    plot_addr_time('R','read_addr_time')
+#    plot_addr_time('W','write_addr_time')
 
-    plot_size_time('R','read_size_time')
-    plot_size_time('W','write_size_time')
-    plot_addr_time('R','read_addr_time')
-    plot_addr_time('W','write_addr_time')
-    
+    #plot_addr_count('W', 'plot_addr_count_W')
+    #plot_addr_count('R', 'plot_addr_count_R')
+    #plot_time_addr('R', 'plot_time_addr_R')
+    #plot_time_addr('W', 'plot_time_addr_W')
+    plot_time_size('W', 'plot_time_size_W')
+    plot_time_size('R', 'plot_time_size_R')
+
