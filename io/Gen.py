@@ -144,8 +144,10 @@ class Gen():
     def print_done_cnt(self):
         print "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
         print "final percentage of write", float(self.done_write_seq_cnt + self.done_write_ran_cnt)/self.config['count']
-        print "final percentage of write random:", float(self.done_write_ran_cnt)/(self.done_write_seq_cnt+self.done_write_ran_cnt)
-        print "final percentage of read random:", float(self.done_read_ran_cnt)/(self.done_read_seq_cnt+self.done_read_ran_cnt)
+        if self.done_write_ran_cnt + self.done_write_seq_cnt:
+            print "final percentage of write random:", float(self.done_write_ran_cnt)/(self.done_write_seq_cnt+self.done_write_ran_cnt)
+        if self.done_read_ran_cnt + self.done_read_seq_cnt:
+            print "final percentage of read random:", float(self.done_read_ran_cnt)/(self.done_read_seq_cnt+self.done_read_ran_cnt)
         print "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
 

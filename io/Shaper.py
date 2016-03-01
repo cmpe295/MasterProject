@@ -46,12 +46,10 @@ class Shaper():
         ios = self.myBuffer.get_all();
         self.gen_write_io(ios)
 
-        arrs = self.read_csv(out_file)
-        self.out_io_count = len(arrs)
 
     def gen_write_io(self,ios):
         for each in ios:
-            self.write_csv(['W',each[0],each[1]])
+            self.write_csv(['W',each[0],each[1]-each[0]])
 
     def gen_read_io(self,ios):
         for each in ios:
@@ -65,6 +63,7 @@ class Shaper():
         content_list.append(self.csv_row) 
         csv_writer = csv.writer(self.out_csv)
         csv_writer.writerows(content_list)
+        self.out_io_count += 1
 
     def print_io_count(self):
         print "=========================================================="

@@ -35,7 +35,6 @@ class Buffer():
         # Buffer user need to check Buffer almost full before adding a new entry
         if self.check_almost_full():
             return False
-        print "add addr:", addr
 
         realAddr = self.translate_addr(addr)
         for each in range(realAddr[0],realAddr[1]):
@@ -76,7 +75,6 @@ class Buffer():
                         pass
         for each in coldAddr:
             self.remove(each)
-        print "coldAddr: ",coldAddr
         return coldAddr
 
     def get_cold(self):

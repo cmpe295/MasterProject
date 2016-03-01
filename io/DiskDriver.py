@@ -41,12 +41,12 @@ if __name__ == '__main__':
     time_before = -1
     time_after = -1
     myDiskDriver = DiskDriver()
-    myDiskDriver.open('./output/gen.csv','/dev/disk3')
+    myDiskDriver.open('./output/gen.csv','/dev/disk2')
     print "Start drive IO to disk:"
     myDiskDriver.run()
     time_before = myDiskDriver.get_time()
 
-    myDiskDriver.open('./output/optimize.csv','/dev/disk3')
+    myDiskDriver.open('./output/optimize.csv','/dev/disk2')
     print "Start drive IO to disk:"
     myDiskDriver.run()
     time_after = myDiskDriver.get_time()
