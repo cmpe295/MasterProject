@@ -3,16 +3,16 @@ import pandas
 
 import bokeh.plotting as plotting
 
-def read_csv():
+def read_csv(csv_file):
     #file = './logs/io.csv'
-    file = './output/gen.csv'
+    file = csv_file
     colnames = ['STIME','TIME','UID','PID','D','BLOCK','SIZE','COMM','PATHNAME']
     data = pandas.read_csv(file,names = colnames)
     return data;
 
-def plot_addr_count(direction, title):
-    data = read_csv()
-    data_addr = data.BLOCK.tolist()
+def plot_addr_count(csv_file,direction, title):
+    data = read_csv(csv_file)
+    data_addr = map(lambda x: x/8, data.BLOCK.tolist())
     data_dir = data.D.tolist()
     map_dir2addr = zip(data_dir, data_addr)
 
@@ -27,13 +27,14 @@ def plot_addr_count(direction, title):
             if item[0]=='W':
                 dic_out.append(item[1])
 
+    title = title + '-' + csv_file.split('/')[-1]
     p = charts.Histogram(dic_out, bins=100, color='#FB9A99', title=title)
     charts.output_file("/tmp/%s.html" % title)
     charts.show(p)
 
-def plot_time_addr(direction, title):
-    data = read_csv()
-    data_addr = zip(data.D.tolist(), data.BLOCK.tolist())
+def plot_time_addr(csv_file,direction, title):
+    data = read_csv(csv_file)
+    data_addr = zip(data.D.tolist(), map(lambda x: x/8, data.BLOCK.tolist())) 
     data_time = zip(data.D.tolist(), range(0, len(data_addr)))
 
     print data_addr
@@ -59,6 +60,7 @@ def plot_time_addr(direction, title):
                 x.append(item[1])
 
 
+    title = title + '-' + csv_file.split('/')[-1]
     plotting.output_file('/tmp/%s.html' % title)
     r = plotting.figure(x_axis_type='datetime')
     r.title = title
@@ -67,9 +69,9 @@ def plot_time_addr(direction, title):
     plotting.show(r)
 
 
-def plot_time_size(direction, title):
-    data = read_csv()
-    data_size = zip(data.D.tolist(), data.SIZE.tolist())
+def plot_time_size(csv_file,direction, title):
+    data = read_csv(csv_file)
+    data_size = zip(data.D.tolist(), map(lambda x: x/4096, data.SIZE.tolist()))
     data_time = zip(data.D.tolist(), range(0, len(data_size)))
 
     print data_size
@@ -95,6 +97,7 @@ def plot_time_size(direction, title):
                 x.append(item[1])
 
 
+    title = title + '-' + csv_file.split('/')[-1]
     plotting.output_file('/tmp/%s.html' % title)
     r = plotting.figure(x_axis_type='datetime')
     r.title = title
@@ -105,8 +108,8 @@ def plot_time_size(direction, title):
 
 
 
-def plot_size_count(dir,title):
-    data = read_csv()
+def plot_size_count(csv_file,dir,title):
+    data = read_csv(csv_file)
     data_size = map(lambda x: x/1024, data.SIZE.tolist())
     data_dir = data.D.tolist()
     length = len(data_size)
@@ -122,8 +125,8 @@ def plot_size_count(dir,title):
     charts.output_file("/tmp/"+title+".html",title=title)
     charts.show(p)
 
-def plot_shuffle_size_count(dir,title):
-    data = read_csv()
+def plot_shuffle_size_count(csv_file,dir,title):
+    data = read_csv(csv_file)
     data_size = map(lambda x: x/1024, data.SIZE.tolist())
     data_dir = data.D.tolist()
     data_path = data.PATHNAME.tolist()
@@ -141,8 +144,8 @@ def plot_shuffle_size_count(dir,title):
     charts.show(p)
 
 
-def plot_size_time(dir,title):
-    data = read_csv()
+def plot_size_time(csv_file,dir,title):
+    data = read_csv(csv_file)
     data_size = map(lambda x: x/1024, data.SIZE.tolist())
     data_dir = data.D.tolist()
     length = len(data_size)
@@ -164,8 +167,8 @@ def plot_size_time(dir,title):
     #r.line(dates, choam, color='#FB9A99', legend='CHOAM')
     plotting.show(r)  # open a browser
 
-def plot_addr_time(dir,title):       # Y: address, X: time
-    data = read_csv()
+def plot_addr_time(csv_file,dir,title):       # Y: address, X: time
+    data = read_csv(csv_file)
     data_addr = map(lambda x: x, data.SIZE.tolist())
     data_dir = data.D.tolist()
     length = len(data_addr)
@@ -259,10 +262,24 @@ if __name__ == '__main__':
 #    plot_addr_time('R','read_addr_time')
 #    plot_addr_time('W','write_addr_time')
 
-    #plot_addr_count('W', 'plot_addr_count_W')
-    #plot_addr_count('R', 'plot_addr_count_R')
-    #plot_time_addr('R', 'plot_time_addr_R')
-    #plot_time_addr('W', 'plot_time_addr_W')
-    plot_time_size('W', 'plot_time_size_W')
-    plot_time_size('R', 'plot_time_size_R')
+    org = './output/gen.csv'
+    opt = './output/optimize.csv'
+
+    plot_addr_count(org,'W', 'plot_addr_count_W')
+    plot_addr_count(opt,'W', 'plot_addr_count_W')
+
+    plot_addr_count(org,'R', 'plot_addr_count_R')
+    plot_addr_count(opt,'R', 'plot_addr_count_R')
+
+    plot_time_addr(org,'W', 'plot_time_addr_W')
+    plot_time_addr(opt,'W', 'plot_time_addr_W')
+
+    plot_time_addr(org,'R', 'plot_time_addr_R')
+    plot_time_addr(opt,'R', 'plot_time_addr_R')
+
+    plot_time_size(org,'W', 'plot_time_size_W')
+    plot_time_size(opt,'W', 'plot_time_size_W')
+
+    plot_time_size(org,'R', 'plot_time_size_R')
+    plot_time_size(opt,'R', 'plot_time_size_R')
 
