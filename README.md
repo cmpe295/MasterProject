@@ -1,12 +1,5 @@
 ##### MasterProject
 
-
-*Components:*
- * Web Crawler 
- * Spark Platfor 
- * Spark ML application
-
-
 *How to fork:*
  1. fork project: https://github.com/cmpe295/MasterProject.git to your github account
   * click on the + button @ (MasterProject/+)
