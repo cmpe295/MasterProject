@@ -13,8 +13,8 @@ class Gen():
         self.cur_addr = 0
         self.cur_size = 4*1024;
         self.dir_arr = ['W','R']
-        self.write_size_arr = [4*1024, 64*1024, 512*1024, 1024*1024]    #put this as input configuration
-        self.read_size_arr  = [4*1024, 64*1024, 512*1024, 1024*1024]     #put this as input configuration
+        self.write_size_arr = [4*1024, 4*1024, 512*1024, 1024*1024]    #put this as input configuration
+        self.read_size_arr  = [4*1024, 4*1024, 512*1024, 1024*1024]     #put this as input configuration
         self.seq_length_arr =     [20, 40, 60, 80, 100,200,300,400]
         self.seq_length_percent = [0.3,0.3,0.2,0.2,0.0,0.0,0.0,0.0]
         self.cur_seq = False

@@ -4,7 +4,7 @@ import numpy as np
 
 class Buffer():
     def __init__(self, config):    
-        self.capacity = config['capacity']
+        self.capacity = config['capacity']//4
         self.full_threshold = self.capacity * float(config['full_watermark'])
         self.hot_watermark = config['hot_watermark']
         self.size = 0

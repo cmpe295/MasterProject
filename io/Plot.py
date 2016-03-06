@@ -268,18 +268,18 @@ if __name__ == '__main__':
     plot_addr_count(org,'W', 'plot_addr_count_W')
     plot_addr_count(opt,'W', 'plot_addr_count_W')
 
-    plot_addr_count(org,'R', 'plot_addr_count_R')
-    plot_addr_count(opt,'R', 'plot_addr_count_R')
+    #plot_addr_count(org,'R', 'plot_addr_count_R')
+    #plot_addr_count(opt,'R', 'plot_addr_count_R')
 
-    plot_time_addr(org,'W', 'plot_time_addr_W')
-    plot_time_addr(opt,'W', 'plot_time_addr_W')
+    #plot_time_addr(org,'W', 'plot_time_addr_W')
+    #plot_time_addr(opt,'W', 'plot_time_addr_W')
 
-    plot_time_addr(org,'R', 'plot_time_addr_R')
-    plot_time_addr(opt,'R', 'plot_time_addr_R')
+    #plot_time_addr(org,'R', 'plot_time_addr_R')
+    #plot_time_addr(opt,'R', 'plot_time_addr_R')
 
-    plot_time_size(org,'W', 'plot_time_size_W')
-    plot_time_size(opt,'W', 'plot_time_size_W')
+    #plot_time_size(org,'W', 'plot_time_size_W')
+    #plot_time_size(opt,'W', 'plot_time_size_W')
 
-    plot_time_size(org,'R', 'plot_time_size_R')
-    plot_time_size(opt,'R', 'plot_time_size_R')
+    #plot_time_size(org,'R', 'plot_time_size_R')
+    #plot_time_size(opt,'R', 'plot_time_size_R')
 
