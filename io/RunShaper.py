@@ -5,7 +5,7 @@ hot_watermark = 4
 write_seq_threshold = 128       #128KB
 
 ##############################################################
-capacity = 1*1000        #50MB
+capacity = 1*1000        #1MB
 myShaper = Shaper({
         'capacity': capacity,         
         'full_watermark': full_watermark,
