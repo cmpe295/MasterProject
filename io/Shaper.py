@@ -16,7 +16,7 @@ class Shaper():
         self.in_ran_io_count = 0
         self.in_seq_size_count = 0
         self.out_ran_io_count = 0
-        self.out_seq_size_count = 0
+        self.out_seq_size= 0
         self.write_seq_threshold = config['write_seq_threshold']
         self.print_input_config(config)
 
@@ -77,7 +77,7 @@ class Shaper():
         if item[2] <= 1:
             self.out_ran_io_count += 1
         else:
-            self.out_seq_size_count += item[2]*4096
+            self.out_seq_size+= item[2]*4096
 
     def get_in_stats(self,arrs):
         self.in_io_count = len(arrs)
@@ -103,7 +103,7 @@ class Shaper():
         print "" 
         print "After Optimizatin:"
         print "I/O count:", self.out_io_count
-        print "Seq size:", self.out_seq_size_count
+        print "Seq size:", self.out_seq_size
         print "random count:", self.out_ran_io_count
         print "=========================================================="
 

@@ -13,12 +13,12 @@ class Gen():
         self.cur_addr = 0
         self.cur_size = 4*1024;
         self.dir_arr = ['W','R']
-        self.write_size_arr = [4*1024, 4*1024, 512*1024, 1024*1024]    #put this as input configuration
-        self.read_size_arr  = [4*1024, 4*1024, 512*1024, 1024*1024]     #put this as input configuration
-        self.seq_length_arr =     [20, 40, 60, 80, 100,200,300,400]
-        self.seq_length_percent = [0.3,0.3,0.2,0.2,0.0,0.0,0.0,0.0]
+        self.write_size_arr = [4*1024, 4*1024, 1024*1024, 1024*1024]    #put this as input configuration
+        self.read_size_arr  = [4*1024, 4*1024, 1024*1024, 1024*1024]     #put this as input configuration
+        self.seq_length_arr =     [1, 40, 60, 80, 100,200,300,400]
+        self.seq_length_percent = [1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
         self.cur_seq = False
-        self.seq_threshold = 512*1024
+        self.seq_threshold = 128*1024
         self.block_size = 512
         self.read_seq_len_factor = 0
         self.write_seq_len_factor = 0
@@ -54,7 +54,7 @@ class Gen():
         percent4 = 1;
         if self.cur_dir == 'W':
             size_arr = self.write_size_arr
-            write_seq_percent_factor =  self.config['write_ran_percent']*self.write_seq_len_factor
+            write_seq_percent_factor =  self.config['write_ran_percent']*self.write_seq_len_factor*256
             ran_percent = write_seq_percent_factor/(1-self.config['write_ran_percent']+write_seq_percent_factor)
             percent1 = float(ran_percent)*3/4;
             percent2 = float(ran_percent)/4;
@@ -62,7 +62,7 @@ class Gen():
             percent4 = 1 - (percent1 + percent2 + percent3)
         else:
             size_arr = self.read_size_arr
-            read_seq_percent_factor =  self.config['read_ran_percent']*self.read_seq_len_factor
+            read_seq_percent_factor =  self.config['read_ran_percent']*self.read_seq_len_factor*256
             ran_percent = read_seq_percent_factor/(1-self.config['read_ran_percent']+read_seq_percent_factor)
             #ran_percent = self.config['read_ran_percent']
             percent1 = float(ran_percent)*2/3;
@@ -88,15 +88,15 @@ class Gen():
                         self.cur_addr + self.cur_size/self.block_size,
                         self.cur_size
                         )
-                self.done_count += 1
+                self.done_count += item[2]/4096
                 items.append(item)
                 self.cur_addr += int(self.cur_size/self.block_size);
 
                 
                 if self.cur_dir=='W':
-                    self.done_write_seq_cnt +=1;
+                    self.done_write_seq_cnt += item[2]/4096;
                 if self.cur_dir=='R':
-                    self.done_read_seq_cnt +=1;
+                    self.done_read_seq_cnt += item[2]/4096;
         
         #another dice to decide random or sequential I/O
         else:
@@ -104,19 +104,19 @@ class Gen():
                     self.gen_addr(),
                     self.gen_size()
                     )
-            self.done_count += 1
+            self.done_count += item[2]/4096
             items.append(item)
 
             if self.cur_dir=='W':
                 if self.cur_size >= self.seq_threshold:
-                    self.done_write_seq_cnt += 1
+                    self.done_write_seq_cnt += item[2]/4096
                 else:
-                    self.done_write_ran_cnt += 1;
+                    self.done_write_ran_cnt += item[2]/4096
             if self.cur_dir=='R':
                 if self.cur_size >= self.seq_threshold:
-                    self.done_read_seq_cnt += 1
+                    self.done_read_seq_cnt += item[2]/4096
                 else:
-                    self.done_read_ran_cnt += 1;
+                    self.done_read_ran_cnt += item[2]/4096;
 
         return items;
 
@@ -145,6 +145,7 @@ class Gen():
         print "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
         print "I/O count:", self.done_count
         print "final percentage of write", float(self.done_write_seq_cnt + self.done_write_ran_cnt)/self.config['count']
+        print "st:",self.done_write_ran_cnt,self.done_write_seq_cnt
         if self.done_write_ran_cnt + self.done_write_seq_cnt:
             print "final percentage of write random:", float(self.done_write_ran_cnt)/(self.done_write_seq_cnt+self.done_write_ran_cnt)
         if self.done_read_ran_cnt + self.done_read_seq_cnt:
