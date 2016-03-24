@@ -1,34 +1,5 @@
-%% Machine Learning Online Class
-%  Exercise 1: Linear regression with multiple variables
-%
-%  Instructions
-%  ------------
-% 
-%  This file contains code that helps you get started on the
-%  linear regression exercise. 
-%
-%  You will need to complete the following functions in this 
-%  exericse:
-%
-%     warmUpExercise.m
-%     plotData.m
-%     gradientDescent.m
-%     computeCost.m
-%     gradientDescentMulti.m
-%     computeCostMulti.m
-%     featureNormalize.m
-%     normalEqn.m
-%
-%  For this part of the exercise, you will need to change some
-%  parts of the code below for various experiments (e.g., changing
-%  learning rates).
-%
 
-%% Initialization
 
-%% ================ Part 1: Feature Normalization ================
-
-%% Clear and Close Figures
 clear ; close all; clc
 
 fprintf('Loading data ...\n');
@@ -39,7 +10,7 @@ data(:,1) = data1(:,1)./100;
 data(:,2) = (data1(:,1)./100).^2;
 data(:,3) = (data1(:,1)./100).^3;
 
-data(:,4) = 73.783 ./ data1(:,2);
+data(:,4) = 69.783 ./ data1(:,2);
 X = data(:, 1:3);
 y = data(:, 4);
 m = length(y);
@@ -59,29 +30,6 @@ fprintf('Normalizing Features ...\n');
 X = [ones(m, 1) X];
 
 
-%% ================ Part 2: Gradient Descent ================
-
-% ====================== YOUR CODE HERE ======================
-% Instructions: We have provided you with the following starter
-%               code that runs gradient descent with a particular
-%               learning rate (alpha). 
-%
-%               Your task is to first make sure that your functions - 
-%               computeCost and gradientDescent already work with 
-%               this starter code and support multiple variables.
-%
-%               After that, try running gradient descent with 
-%               different values of alpha and see which one gives
-%               you the best result.
-%
-%               Finally, you should complete the code at the end
-%               to predict the price of a 1650 sq-ft, 3 br house.
-%
-% Hint: By using the 'hold on' command, you can plot multiple
-%       graphs on the same figure.
-%
-% Hint: At prediction, make sure you do the same feature normalization.
-%
 
 fprintf('Running gradient descent ...\n');
 

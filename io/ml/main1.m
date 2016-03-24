@@ -8,7 +8,7 @@ clear ; close all; clc
 %clean the data first
 data = data1 = load('../Training-BufSize.txt');
 data(:,1) = data1(:,1)./100;
-data(:,2) = 73.783 ./ data1(:,2);
+data(:,2) = 69.783 ./ data1(:,2);
 
 fprintf('Plotting Data ...\n')
 X = data(:, 1); 
