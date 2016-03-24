@@ -55,6 +55,8 @@ class Shaper():
         #clear all data in Buffer
         ios = self.myBuffer.get_all();
         self.gen_write_io(ios)
+        self.out_csv.close()
+
 
 
     def gen_write_io(self,ios):

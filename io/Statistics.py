@@ -13,6 +13,7 @@ class Statistics():
         self.ran_read_count = 0
         self.ran_write_count = 0
         self.print_config()
+        self.total_time = 0
 
     def read_csv(self,in_file):
         colnames = ['STIME','TIME','UID','PID','D','BLOCK','SIZE','COMM','PATHNAME']
@@ -51,8 +52,8 @@ class Statistics():
     def run(self):
         arrs = self.read_csv(self.config['file'])
         self.get_stats(arrs)
-        total_time = self.cal_time()
-        print "Total time:", total_time
+        self.total_time = self.cal_time()
+        print "Total time:", self.total_time
 
     def cal_time(self):
         #seq time
