@@ -6,7 +6,7 @@ clear ; close all; clc
 
 %% ======================= lotting the original data=======================
 %clean the data first
-data = data1 = load('../Training-BufSize.txt');
+data = data1 = load('../output/training_data_bufsize.txt');
 data(:,1) = data1(:,1)./100;
 data(:,2) = 69.783 ./ data1(:,2);
 
