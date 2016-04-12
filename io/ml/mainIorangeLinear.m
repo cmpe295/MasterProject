@@ -7,12 +7,12 @@ clear ; close all; clc
 %% ======================= lotting the original data=======================
 %clean the data first
 data = data1 = load('../output/training_data_iorange.txt');
-data(:,1) = data1(:,1)./100;
-data(:,2) = 69.783 ./ data1(:,3);
+data(:,1) = (log((data1(:,1)./100)));
+%data(:,2) = 69.783 ./ data1(:,3);
 
 fprintf('Plotting Data ...\n')
 X = data(:, 1); 
-y = data(:, 2);
+y = data1(:, 3);
 m = length(y); % number of training examples
 
 % Plot Data

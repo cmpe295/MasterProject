@@ -7,17 +7,28 @@ clear ; close all; clc
 %% ======================= lotting the original data=======================
 %clean the data first
 data = data1 = load('../output/training_data_iorange.txt');
+
+%generate 11 more features, we may not use them all, tune this in the future
 data(:,1) = data1(:,1)./100;
 data(:,2) = (data1(:,1)./100).^2;
 data(:,3) = (data1(:,1)./100).^3;
 data(:,4) = (data1(:,1)./100).^4;
 data(:,5) = (data1(:,1)./100).^5;
+data(:,6) = (data1(:,1)./100).^6;
+data(:,7) = (data1(:,1)./100).^7;
+data(:,8) = (data1(:,1)./100).^8;
+data(:,9) = (data1(:,1)./100).^9;
+data(:,10) = (data1(:,1)./100).^10;
+data(:,11) = (data1(:,1)./100).^11;
+data(:,12) = (data1(:,1)./100).^12;
 
-data(:,6) = 69.783 ./ data1(:,3);
+data(:,3:3) = log(data(:,3:3));
+
+
 
 fprintf('Plotting Data ...\n')
-X = data(:, 1:5); 
-y = data(:, 6);
+X = data(:, 1:6); 
+y = data1(:,3);
 m = length(y); % number of training examples
 
 % Plot Data
@@ -42,17 +53,16 @@ X = [ones(m, 1) X];
 fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
-alpha = 0.002;
+alpha = 0.02;
 num_iters = 4000;
-
 % Init Theta and Run Gradient Descent 
-theta = zeros(6, 1);
+theta = zeros(length(X(1,:)), 1);
 [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
 
 
 % Plot the linear fit
 hold on; % keep previous plot visible
-plot(data(:,1),  X*theta, '-','MarkerSize',1)
+plot(data(:,1),  X*theta, '-','MarkerSize',1, 'LineWidth', 2)
 legend('Training data', 'Linear regression')
 hold off % don't overlay any more plots on this figure
 
